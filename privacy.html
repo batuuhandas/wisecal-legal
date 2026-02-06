@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - WiseCal</title>
     <style>
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #f5f5f7;
+                --text-secondary: #86868b;
+                --bg-primary: #000000;
+                --bg-secondary: #1d1d1f;
+                --accent: #2997ff;
+                --border: #424245;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,79 +32,90 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+            font-size: 17px;
+            line-height: 1.47059;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 48px 24px 80px;
         }
 
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-        }
-
-        .header {
+        header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 18px;
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(145deg, #5e5ce6, #bf5af2);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 40px;
+            margin: 0 auto 16px;
+        }
+
+        .app-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .app-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
         }
 
         h1 {
-            color: #1a1a2e;
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--text-primary);
         }
 
-        .lang-switch {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
+        .lang-toggle {
+            display: inline-flex;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 4px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
         }
 
         .lang-btn {
-            padding: 8px 20px;
-            border: 2px solid #667eea;
-            border-radius: 20px;
-            background: white;
-            color: #667eea;
+            padding: 6px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.2s;
+            background: transparent;
+            color: var(--text-secondary);
         }
 
         .lang-btn.active {
-            background: #667eea;
-            color: white;
-        }
-
-        .lang-btn:hover {
-            transform: translateY(-2px);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .updated {
-            color: #888;
             font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
         }
 
         .content {
@@ -96,250 +127,256 @@
         }
 
         h2 {
-            color: #667eea;
-            font-size: 20px;
-            margin: 30px 0 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 40px 0 16px;
+            color: var(--text-primary);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         h3 {
-            color: #444;
-            font-size: 16px;
-            margin: 20px 0 10px;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
         }
 
-        p, li {
-            color: #555;
-            margin-bottom: 10px;
+        p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
         }
 
         ul {
-            padding-left: 25px;
+            margin: 0 0 16px 20px;
+            color: var(--text-primary);
         }
 
-        .highlight {
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            border-radius: 0 10px 10px 0;
+        li {
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
             margin: 20px 0;
         }
 
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 30px;
+        .card ul {
+            margin-bottom: 0;
         }
 
-        .contact-box a {
-            color: white;
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 32px;
+            margin-top: 48px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+        }
+
+        .contact-section h2 {
+            margin: 0 0 8px;
+            font-size: 19px;
+        }
+
+        .contact-section p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .contact-section a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        strong {
             font-weight: 600;
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #888;
-            font-size: 14px;
-        }
-
         @media (max-width: 600px) {
-            .card {
-                padding: 25px;
-                border-radius: 15px;
+            .container {
+                padding: 32px 20px 60px;
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
-            .container {
-                padding: 20px 15px;
+            h2 {
+                font-size: 19px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <div class="header">
-                <div class="logo">📅</div>
-                <h1>WiseCal</h1>
-                <div class="lang-switch">
-                    <button class="lang-btn active" onclick="switchLang('en')">English</button>
-                    <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
-                </div>
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+                </svg>
             </div>
+            <div class="app-name">WISECAL</div>
+            <h1 id="page-title">Privacy Policy</h1>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Turkce</button>
+            </div>
+        </header>
 
-            <!-- English Content -->
+        <main>
+            <!-- English -->
             <div id="content-en" class="content active">
-                <h1>Privacy Policy</h1>
                 <p class="updated">Last updated: February 2025</p>
 
-                <h2>1. Introduction</h2>
-                <p>WiseCal ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.</p>
+                <h2>Introduction</h2>
+                <p>WiseCal respects your privacy. This policy explains how we handle your information when you use our app.</p>
 
-                <h2>2. Information We Collect</h2>
+                <h2>Information We Collect</h2>
 
-                <h3>a) Calendar Data</h3>
-                <ul>
-                    <li>We access your device calendar through Apple EventKit to create and manage appointments</li>
-                    <li>Calendar data stays on your device and is never uploaded to our servers</li>
-                </ul>
+                <h3>Calendar Data</h3>
+                <p>We access your device calendar through Apple EventKit to create appointments. Calendar data stays on your device and is never uploaded to our servers.</p>
 
-                <h3>b) Screenshots and Images</h3>
-                <ul>
-                    <li>When you share a screenshot, it is temporarily processed to extract text</li>
-                    <li>Images are sent to Google Gemini AI for text analysis</li>
-                    <li>Images are not stored after processing</li>
-                </ul>
+                <h3>Screenshots</h3>
+                <p>When you share a screenshot, it is processed to extract text. Images are sent to Google Gemini AI for analysis and are not stored after processing.</p>
 
-                <h3>c) Usage Analytics</h3>
-                <ul>
-                    <li>We collect anonymous usage data through Firebase Analytics</li>
-                    <li>This includes: app opens, feature usage, and error reports</li>
-                    <li>No personally identifiable information is collected</li>
-                </ul>
+                <h3>Analytics</h3>
+                <p>We collect anonymous usage data through Firebase Analytics to improve the app. No personally identifiable information is collected.</p>
 
-                <h2>3. How We Use Your Data</h2>
-                <div class="highlight">
+                <h2>How We Use Your Data</h2>
+                <div class="card">
                     <ul>
-                        <li>To extract appointment information from screenshots</li>
-                        <li>To create calendar events on your behalf</li>
-                        <li>To improve app performance and user experience</li>
+                        <li>Extract appointment details from screenshots</li>
+                        <li>Create calendar events on your behalf</li>
+                        <li>Improve app performance</li>
                     </ul>
                 </div>
 
-                <h2>4. Third-Party Services</h2>
-                <p>We use the following third-party services:</p>
+                <h2>Third-Party Services</h2>
                 <ul>
-                    <li><strong>Google Gemini AI:</strong> For text extraction and date parsing</li>
-                    <li><strong>Firebase Analytics:</strong> For anonymous usage statistics</li>
-                    <li><strong>Apple EventKit:</strong> For calendar integration</li>
+                    <li><strong>Google Gemini AI</strong> — Text extraction and date parsing</li>
+                    <li><strong>Firebase Analytics</strong> — Anonymous usage statistics</li>
+                    <li><strong>Apple EventKit</strong> — Calendar integration</li>
                 </ul>
 
-                <h2>5. Data Retention</h2>
+                <h2>Data Retention</h2>
                 <ul>
                     <li><strong>Screenshots:</strong> Deleted immediately after processing</li>
-                    <li><strong>Analytics data:</strong> Retained for 90 days</li>
+                    <li><strong>Analytics:</strong> Retained for 90 days</li>
                     <li><strong>Calendar events:</strong> Stored locally on your device</li>
                 </ul>
 
-                <h2>6. Your Rights</h2>
-                <p>You can:</p>
-                <ul>
-                    <li>Delete the app to remove all local data</li>
-                    <li>Disable analytics in device settings</li>
-                    <li>Request data deletion by contacting us</li>
-                </ul>
+                <h2>Your Rights</h2>
+                <p>You can delete the app to remove all local data, disable analytics in device settings, or contact us to request data deletion.</p>
 
-                <h2>7. Children's Privacy</h2>
+                <h2>Children's Privacy</h2>
                 <p>WiseCal is not intended for children under 13. We do not knowingly collect data from children.</p>
 
-                <h2>8. Changes to This Policy</h2>
-                <p>We may update this policy. Changes will be posted in the app and on this page.</p>
+                <h2>Changes</h2>
+                <p>We may update this policy. Changes will be posted on this page.</p>
 
-                <div class="contact-box">
-                    <h2 style="color: white; border: none; margin: 0 0 10px 0;">Contact Us</h2>
-                    <p style="color: rgba(255,255,255,0.9); margin: 0;">For questions or concerns:</p>
+                <div class="contact-section">
+                    <h2>Contact</h2>
+                    <p>Questions or concerns?</p>
                     <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
                 </div>
             </div>
 
-            <!-- Turkish Content -->
+            <!-- Turkish -->
             <div id="content-tr" class="content">
-                <h1>Gizlilik Politikası</h1>
-                <p class="updated">Son güncelleme: Şubat 2025</p>
+                <p class="updated">Son guncelleme: Subat 2025</p>
 
-                <h2>1. Giriş</h2>
-                <p>WiseCal olarak gizliliğinize saygı duyuyoruz. Bu Gizlilik Politikası, uygulamamızı kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.</p>
+                <h2>Giris</h2>
+                <p>WiseCal olarak gizliliginize saygi duyuyoruz. Bu politika, uygulamayi kullandiginizda bilgilerinizi nasil isledigimizi aciklar.</p>
 
-                <h2>2. Toplanan Veriler</h2>
+                <h2>Toplanan Veriler</h2>
 
-                <h3>a) Takvim Verileri</h3>
-                <ul>
-                    <li>Randevu oluşturmak için Apple EventKit aracılığıyla takviminize erişiyoruz</li>
-                    <li>Takvim verileri cihazınızda kalır, sunucularımıza yüklenmez</li>
-                </ul>
+                <h3>Takvim Verileri</h3>
+                <p>Randevu olusturmak icin Apple EventKit araciligiyla takviminize erisiyoruz. Takvim verileri cihazinizda kalir, sunuculara yuklenmez.</p>
 
-                <h3>b) Ekran Görüntüleri</h3>
-                <ul>
-                    <li>Paylaştığınız ekran görüntüleri metin çıkarmak için geçici olarak işlenir</li>
-                    <li>Görüntüler metin analizi için Google Gemini AI'a gönderilir</li>
-                    <li>İşlem sonrası görüntüler saklanmaz</li>
-                </ul>
+                <h3>Ekran Goruntuleri</h3>
+                <p>Paylasilan ekran goruntuleri metin cikarmak icin islenir. Gorseller analiz icin Google Gemini AI'a gonderilir ve islem sonrasi saklanmaz.</p>
 
-                <h3>c) Kullanım Analitiği</h3>
-                <ul>
-                    <li>Firebase Analytics ile anonim kullanım verileri topluyoruz</li>
-                    <li>Bunlar: uygulama açılışları, özellik kullanımı ve hata raporları</li>
-                    <li>Kişisel tanımlayıcı bilgi toplanmaz</li>
-                </ul>
+                <h3>Analitik</h3>
+                <p>Uygulamayi gelistirmek icin Firebase Analytics ile anonim kullanim verileri topluyoruz. Kisisel tanimlayici bilgi toplanmaz.</p>
 
-                <h2>3. Veri Kullanımı</h2>
-                <div class="highlight">
+                <h2>Veri Kullanimi</h2>
+                <div class="card">
                     <ul>
-                        <li>Ekran görüntülerinden randevu bilgisi çıkarmak</li>
-                        <li>Sizin adınıza takvim etkinlikleri oluşturmak</li>
-                        <li>Uygulama performansını iyileştirmek</li>
+                        <li>Ekran goruntusunden randevu bilgisi cikarma</li>
+                        <li>Sizin adiniza takvim etkinligi olusturma</li>
+                        <li>Uygulama performansini iyilestirme</li>
                     </ul>
                 </div>
 
-                <h2>4. Üçüncü Taraf Hizmetler</h2>
-                <p>Şu hizmetleri kullanıyoruz:</p>
+                <h2>Ucuncu Taraf Hizmetler</h2>
                 <ul>
-                    <li><strong>Google Gemini AI:</strong> Metin çıkarma ve tarih ayrıştırma</li>
-                    <li><strong>Firebase Analytics:</strong> Anonim kullanım istatistikleri</li>
-                    <li><strong>Apple EventKit:</strong> Takvim entegrasyonu</li>
+                    <li><strong>Google Gemini AI</strong> — Metin cikarma ve tarih ayristirma</li>
+                    <li><strong>Firebase Analytics</strong> — Anonim kullanim istatistikleri</li>
+                    <li><strong>Apple EventKit</strong> — Takvim entegrasyonu</li>
                 </ul>
 
-                <h2>5. Veri Saklama</h2>
+                <h2>Veri Saklama</h2>
                 <ul>
-                    <li><strong>Ekran görüntüleri:</strong> İşlem sonrası hemen siliniyor</li>
-                    <li><strong>Analitik verileri:</strong> 90 gün saklanır</li>
-                    <li><strong>Takvim etkinlikleri:</strong> Cihazınızda yerel olarak saklanır</li>
+                    <li><strong>Ekran goruntuleri:</strong> Islem sonrasi hemen siliniyor</li>
+                    <li><strong>Analitik:</strong> 90 gun saklanir</li>
+                    <li><strong>Takvim etkinlikleri:</strong> Cihazinizda yerel olarak saklanir</li>
                 </ul>
 
-                <h2>6. Haklarınız</h2>
-                <p>Şunları yapabilirsiniz:</p>
-                <ul>
-                    <li>Tüm yerel verileri silmek için uygulamayı kaldırabilirsiniz</li>
-                    <li>Cihaz ayarlarından analitiği devre dışı bırakabilirsiniz</li>
-                    <li>Bizimle iletişime geçerek veri silme talebinde bulunabilirsiniz</li>
-                </ul>
+                <h2>Haklariniz</h2>
+                <p>Tum yerel verileri silmek icin uygulamayi kaldirabilir, cihaz ayarlarindan analitigi devre disi birakabilir veya veri silme talebi icin bizimle iletisime gecebilirsiniz.</p>
 
-                <h2>7. Çocuk Gizliliği</h2>
-                <p>WiseCal 13 yaş altı çocuklar için tasarlanmamıştır. Çocuklardan bilerek veri toplamıyoruz.</p>
+                <h2>Cocuk Gizliligi</h2>
+                <p>WiseCal 13 yas alti cocuklar icin tasarlanmamistir. Cocuklardan bilerek veri toplamiyoruz.</p>
 
-                <h2>8. Politika Değişiklikleri</h2>
-                <p>Bu politikayı güncelleyebiliriz. Değişiklikler uygulamada ve bu sayfada duyurulacaktır.</p>
+                <h2>Degisiklikler</h2>
+                <p>Bu politikayi guncelleyebiliriz. Degisiklikler bu sayfada duyurulacaktir.</p>
 
-                <div class="contact-box">
-                    <h2 style="color: white; border: none; margin: 0 0 10px 0;">İletişim</h2>
-                    <p style="color: rgba(255,255,255,0.9); margin: 0;">Sorularınız için:</p>
+                <div class="contact-section">
+                    <h2>Iletisim</h2>
+                    <p>Sorulariniz icin</p>
                     <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
                 </div>
             </div>
+        </main>
 
-            <div class="footer">
-                <p>&copy; 2025 WiseCal. All rights reserved.</p>
-            </div>
-        </div>
+        <footer>
+            <p>&copy; 2025 WiseCal</p>
+            <p><a href="terms.html">Terms of Service</a></p>
+        </footer>
     </div>
 
     <script>
         function switchLang(lang) {
-            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('content-' + lang).classList.add('active');
             event.target.classList.add('active');
+            document.getElementById('page-title').textContent = lang === 'en' ? 'Privacy Policy' : 'Gizlilik Politikasi';
         }
     </script>
 </body>
