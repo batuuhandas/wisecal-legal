@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - WiseCal</title>
+    <style>
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #f5f5f7;
+                --text-secondary: #86868b;
+                --bg-primary: #000000;
+                --bg-secondary: #1d1d1f;
+                --accent: #2997ff;
+                --border: #424245;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+            font-size: 17px;
+            line-height: 1.47059;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(145deg, #5e5ce6, #bf5af2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .app-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .app-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: var(--text-primary);
+        }
+
+        .lang-toggle {
+            display: inline-flex;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 4px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            color: var(--text-secondary);
+        }
+
+        .lang-btn.active {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 40px 0 16px;
+            color: var(--text-primary);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        ul {
+            margin: 0 0 16px 20px;
+            color: var(--text-primary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .card ul {
+            margin-bottom: 0;
+        }
+
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 32px;
+            margin-top: 48px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+        }
+
+        .contact-section h2 {
+            margin: 0 0 8px;
+            font-size: 19px;
+        }
+
+        .contact-section p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .contact-section a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 20px 60px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+            </div>
+            <p class="app-name">WISECAL</p>
+            <h1 id="page-title">Support</h1>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Turkce</button>
+            </div>
+        </header>
+
+        <div id="content-en" class="content active">
+            <h2>Getting Started</h2>
+            <p>WiseCal turns your messages, photos, and screenshots into calendar events instantly using AI. Here's how to get started:</p>
+
+            <div class="card">
+                <ul>
+                    <li><strong>Text Input:</strong> Paste or type any message containing appointment details</li>
+                    <li><strong>Photo Input:</strong> Take a photo or choose from your gallery</li>
+                    <li><strong>Share Extension:</strong> Share a screenshot directly from any app</li>
+                </ul>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>How does WiseCal read my screenshots?</h3>
+                <p>WiseCal uses on-device text recognition (OCR) to read text from your images. Only the extracted text is sent to AI for analysis — your images are never uploaded.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does WiseCal access my calendar?</h3>
+                <p>Yes, WiseCal uses Apple's EventKit to create events in your calendar. You will always be asked to confirm before any event is saved.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which languages are supported?</h3>
+                <p>WiseCal currently supports Turkish and English for both the app interface and message recognition.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why isn't the AI detecting my appointment?</h3>
+                <p>Make sure the text includes a date or time reference. The AI works best with clear messages like "meeting tomorrow at 3pm" or "appointment on March 15".</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I restore my purchase?</h3>
+                <p>Go to Settings in the app and tap "Restore Purchases". Your subscription will be restored automatically if you have an active purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <p>Subscriptions are managed through Apple. Go to iPhone Settings > Apple ID > Subscriptions > WiseCal to manage or cancel.</p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Still Need Help?</h2>
+                <p>We're here to help. Reach out to us anytime.</p>
+                <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
+            </div>
+        </div>
+
+        <div id="content-tr" class="content">
+            <h2>Baslarken</h2>
+            <p>WiseCal, mesajlarinizi, fotograflarinizi ve ekran goruntulerinizi yapay zeka ile aninda takvim etkinligine donusturur. Baslangic rehberi:</p>
+
+            <div class="card">
+                <ul>
+                    <li><strong>Metin Girisi:</strong> Randevu iceren herhangi bir mesaji yapisitirin veya yazin</li>
+                    <li><strong>Fotograf Girisi:</strong> Fotograf cekin veya galerinizden secin</li>
+                    <li><strong>Paylasim Uzantisi:</strong> Herhangi bir uygulamadan ekran goruntusunu dogrudan paylasin</li>
+                </ul>
+            </div>
+
+            <h2>Sikca Sorulan Sorular</h2>
+
+            <div class="faq-item">
+                <h3>WiseCal ekran goruntumu nasil okuyor?</h3>
+                <p>WiseCal, gorsellerinizdeki metni okumak icin cihaz uzerinde metin tanima (OCR) kullanir. Yapay zekaya yalnizca cikarilan metin gonderilir — gorselleriniz hicbir yere yuklenmez.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>WiseCal takvimime erisir mi?</h3>
+                <p>Evet, WiseCal takviminizde etkinlik olusturmak icin Apple EventKit kullanir. Herhangi bir etkinlik kaydedilmeden once onayiniz istenir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Hangi diller destekleniyor?</h3>
+                <p>WiseCal su anda hem uygulama arayuzu hem de mesaj tanima icin Turkce ve Ingilizce desteklemektedir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Yapay zeka randevumu neden algilayamiyor?</h3>
+                <p>Metnin bir tarih veya saat referansi icerdiginden emin olun. Yapay zeka "yarin saat 3'te gorusme" veya "15 Mart'ta randevu" gibi net mesajlarla en iyi sekilde calisir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Satin alimimi nasil geri yuklerim?</h3>
+                <p>Uygulamadaki Ayarlar'a gidin ve "Satin Alimlari Geri Yukle" secenegine dokunun. Aktif bir satin aliminiz varsa aboneliginiz otomatik olarak geri yuklenecektir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Aboneligimi nasil iptal ederim?</h3>
+                <p>Abonelikler Apple uzerinden yonetilir. iPhone Ayarlar > Apple Kimliginiz > Abonelikler > WiseCal yolunu izleyerek yonetebilir veya iptal edebilirsiniz.</p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Hala Yardima mi Ihtiyaciniz Var?</h2>
+                <p>Size yardimci olmak icin buradayiz.</p>
+                <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 WiseCal
+            <br><br>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+            event.target.classList.add('active');
+            document.getElementById('page-title').textContent = lang === 'en' ? 'Support' : 'Destek';
+        }
+    </script>
+</body>
+</html>
