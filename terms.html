@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - WiseCal</title>
+    <title>EULA - WiseCal</title>
     <style>
         :root {
             --text-primary: #1d1d1f;
@@ -25,11 +25,7 @@
             }
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
@@ -40,11 +36,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
+        .container { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
 
         header {
             text-align: center;
@@ -54,195 +46,72 @@
         }
 
         .app-icon {
-            width: 72px;
-            height: 72px;
+            width: 72px; height: 72px;
             background: linear-gradient(145deg, #5e5ce6, #bf5af2);
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 16px;
         }
 
-        .app-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: white;
-        }
+        .app-icon svg { width: 40px; height: 40px; fill: white; }
 
         .app-name {
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 14px; font-weight: 600;
             color: var(--text-secondary);
-            letter-spacing: -0.01em;
-            margin-bottom: 8px;
+            letter-spacing: -0.01em; margin-bottom: 8px;
         }
 
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.015em;
-            color: var(--text-primary);
-        }
+        h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.015em; color: var(--text-primary); }
 
         .lang-toggle {
-            display: inline-flex;
-            gap: 8px;
-            margin-top: 20px;
-            padding: 4px;
-            background: var(--bg-secondary);
-            border-radius: 8px;
+            display: inline-flex; gap: 8px; margin-top: 20px; padding: 4px;
+            background: var(--bg-secondary); border-radius: 8px; flex-wrap: wrap; justify-content: center;
         }
 
         .lang-btn {
-            padding: 6px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: transparent;
-            color: var(--text-secondary);
+            padding: 6px 16px; border: none; border-radius: 6px;
+            font-size: 14px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s; background: transparent; color: var(--text-secondary);
         }
 
         .lang-btn.active {
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            background: var(--bg-primary); color: var(--text-primary);
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
-        .updated {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
+        .updated { font-size: 14px; color: var(--text-secondary); margin-bottom: 32px; }
+        .content { display: none; }
+        .content.active { display: block; }
 
-        .content {
-            display: none;
-        }
+        h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin: 40px 0 16px; color: var(--text-primary); }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 16px; color: var(--text-primary); }
+        ul { margin: 0 0 16px 20px; color: var(--text-primary); }
+        li { margin-bottom: 8px; }
 
-        .content.active {
-            display: block;
-        }
-
-        h2 {
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 40px 0 16px;
-            color: var(--text-primary);
-        }
-
-        h2:first-of-type {
-            margin-top: 0;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-
-        ul {
-            margin: 0 0 16px 20px;
-            color: var(--text-primary);
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .card ul {
-            margin-bottom: 0;
-        }
-
-        .card li:last-child {
-            margin-bottom: 0;
-        }
-
-        .warning-card {
-            background: #fff3cd;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .warning-card {
-                background: #3d3200;
-            }
-        }
-
-        .warning-card ul {
-            margin-bottom: 0;
-        }
-
-        .warning-card li:last-child {
-            margin-bottom: 0;
-        }
+        .card { background: var(--bg-secondary); border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .card ul { margin-bottom: 0; }
+        .card li:last-child { margin-bottom: 0; }
 
         .contact-section {
-            text-align: center;
-            padding: 32px;
-            margin-top: 48px;
-            background: var(--bg-secondary);
-            border-radius: 16px;
+            text-align: center; padding: 32px; margin-top: 48px;
+            background: var(--bg-secondary); border-radius: 16px;
         }
-
-        .contact-section h2 {
-            margin: 0 0 8px;
-            font-size: 19px;
-        }
-
-        .contact-section p {
-            margin-bottom: 12px;
-            color: var(--text-secondary);
-            font-size: 15px;
-        }
-
-        .contact-section a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
+        .contact-section h2 { margin: 0 0 8px; font-size: 19px; }
+        .contact-section p { margin-bottom: 12px; color: var(--text-secondary); font-size: 15px; }
+        .contact-section a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
         footer {
-            text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            font-size: 14px;
-            color: var(--text-secondary);
+            text-align: center; margin-top: 48px; padding-top: 24px;
+            border-top: 1px solid var(--border); font-size: 14px; color: var(--text-secondary);
         }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        strong {
-            font-weight: 600;
-        }
+        footer a { color: var(--accent); text-decoration: none; }
+        strong { font-weight: 600; }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 32px 20px 60px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 19px;
-            }
+            .container { padding: 32px 20px 60px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 19px; }
         }
     </style>
 </head>
@@ -251,144 +120,374 @@
         <header>
             <div class="app-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                    <path d="M7 9h10v2H7z"/>
+                    <path d="M7 13h10v2H7z"/>
                 </svg>
             </div>
             <div class="app-name">WISECAL</div>
-            <h1 id="page-title">Terms of Service</h1>
+            <h1 id="page-title">End-User License Agreement</h1>
             <div class="lang-toggle">
                 <button class="lang-btn active" onclick="switchLang('en')">English</button>
-                <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Turkce</button>
+                <button class="lang-btn" onclick="switchLang('es')">Espanol</button>
+                <button class="lang-btn" onclick="switchLang('de')">Deutsch</button>
             </div>
         </header>
 
-        <main>
-            <!-- English -->
-            <div id="content-en" class="content active">
-                <p class="updated">Last updated: February 2025</p>
+        <!-- ENGLISH -->
+        <div id="content-en" class="content active">
+            <div class="updated">Last updated: March 2026</div>
 
-                <h2>Acceptance</h2>
-                <p>By using WiseCal, you agree to these terms. If you do not agree, please do not use the app.</p>
+            <h2>End-User License Agreement (EULA)</h2>
+            <p>This End-User License Agreement ("EULA") is a legal agreement between you ("End-User") and Batuhan Das ("Developer", "we", "us") for the use of the WiseCal application ("Licensed Application"). By downloading, installing, or using WiseCal, you agree to be bound by the terms of this EULA.</p>
 
-                <h2>Service</h2>
-                <p>WiseCal helps you create calendar events from screenshots using AI. The app extracts text from images and creates calendar entries based on the extracted information.</p>
+            <h2>1. Acknowledgement</h2>
+            <p>You and the Developer acknowledge that this EULA is concluded between the Developer and the End-User only, and not with Apple Inc. ("Apple"). The Developer, not Apple, is solely responsible for the Licensed Application and the content thereof. This EULA does not provide for usage rules that are in conflict with the <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" style="color: var(--accent);">Apple Media Services Terms and Conditions</a> as of the date of this EULA.</p>
 
-                <h2>Your Responsibilities</h2>
-                <div class="card">
-                    <ul>
-                        <li>Verify the accuracy of extracted appointment details</li>
-                        <li>Ensure you have rights to share any images you process</li>
-                        <li>Do not use the app for unlawful purposes</li>
-                    </ul>
-                </div>
+            <h2>2. Scope of License</h2>
+            <p>The Developer grants you a limited, non-transferable license to use the Licensed Application on any Apple-branded products that you own or control, as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions. This license does not allow you to distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. The Licensed Application may be accessed and used by other accounts associated with you via Family Sharing, volume purchasing, or Legacy Contacts.</p>
 
-                <h2>Premium Subscription</h2>
+            <h2>3. Service Description</h2>
+            <p>WiseCal helps you create calendar events from screenshots using AI. The app extracts text from images and creates calendar entries based on the extracted information.</p>
+
+            <h2>4. Your Responsibilities</h2>
+            <ul>
+                <li>Verify the accuracy of extracted appointment details</li>
+                <li>Ensure you have rights to share any images you process</li>
+                <li>Do not use the app for unlawful purposes</li>
+            </ul>
+
+            <h2>5. Premium Subscription</h2>
+            <div class="card">
                 <ul>
                     <li>Some features require a paid subscription</li>
-                    <li>Billed through the Apple App Store</li>
-                    <li>Cancel anytime via Apple ID settings</li>
-                    <li>Refunds handled by Apple per their policies</li>
+                    <li>Subscriptions are billed through the Apple App Store</li>
+                    <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period</li>
+                    <li>Cancel anytime via your Apple ID settings</li>
+                    <li>Refunds are handled by Apple per their refund policies</li>
                 </ul>
+            </div>
+            <p>New users receive 5 free event creations. After the free usage, a Premium subscription is required for continued use of AI features.</p>
 
-                <h2>Free Trial</h2>
-                <p>New users receive 5 free event creations. After the trial, a Premium subscription is required for continued use.</p>
+            <h2>6. Maintenance and Support</h2>
+            <p>The Developer is solely responsible for providing any maintenance and support services with respect to the Licensed Application, as specified in this EULA or as required under applicable law. You and the Developer acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the Licensed Application.</p>
 
-                <h2>Limitations</h2>
-                <div class="warning-card">
-                    <ul>
-                        <li>We do not guarantee 100% accuracy in text extraction</li>
-                        <li>Service availability may vary</li>
-                        <li>We are not responsible for missed appointments due to extraction errors</li>
-                        <li>The app is provided "as is" without warranties</li>
-                    </ul>
-                </div>
+            <h2>7. Warranty</h2>
+            <p>The Developer is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. In the event of any failure of the Licensed Application to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the Licensed Application to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the Licensed Application, and any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty will be the Developer's sole responsibility.</p>
 
-                <h2>Intellectual Property</h2>
-                <p>WiseCal and its features are our property. You retain all rights to your calendar data and personal information.</p>
+            <h2>8. Product Claims</h2>
+            <p>You and the Developer acknowledge that the Developer, not Apple, is responsible for addressing any claims you or any third party may have relating to the Licensed Application or your possession and/or use of the Licensed Application, including but not limited to: (i) product liability claims; (ii) any claim that the Licensed Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.</p>
 
-                <h2>Termination</h2>
-                <p>We may terminate access if you violate these terms or engage in fraudulent activity.</p>
+            <h2>9. Intellectual Property</h2>
+            <p>You and the Developer acknowledge that, in the event of any third-party claim that the Licensed Application or your possession and use of the Licensed Application infringes that third party's intellectual property rights, the Developer, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.</p>
+            <p>WiseCal and its features are the property of the Developer. You retain all rights to your calendar data and personal information.</p>
 
-                <h2>Changes</h2>
-                <p>We may update these terms. Continued use after changes constitutes acceptance.</p>
+            <h2>10. Legal Compliance</h2>
+            <p>You represent and warrant that: (i) you are not located in a region that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" region; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</p>
 
-                <div class="contact-section">
-                    <h2>Contact</h2>
-                    <p>Questions about these terms?</p>
-                    <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
-                </div>
+            <h2>11. Third-Party Terms of Agreement</h2>
+            <p>You must comply with applicable third-party terms of agreement when using the Licensed Application, including your wireless data service agreement.</p>
+
+            <h2>12. Third-Party Beneficiary</h2>
+            <p>You and the Developer acknowledge and agree that Apple, and Apple's subsidiaries, are third-party beneficiaries of this EULA, and that, upon your acceptance of the terms and conditions of this EULA, Apple will have the right (and will be deemed to have accepted the right) to enforce this EULA against you as a third-party beneficiary thereof.</p>
+
+            <h2>13. Limitations</h2>
+            <ul>
+                <li>We do not guarantee 100% accuracy in text extraction</li>
+                <li>Service availability may vary</li>
+                <li>We are not responsible for missed appointments due to extraction errors</li>
+                <li>The app is provided "as is" without warranties of any kind</li>
+            </ul>
+
+            <h2>14. Termination</h2>
+            <p>This EULA is effective until terminated. Your rights under this EULA will terminate automatically if you fail to comply with any of its terms. We may also terminate access if you engage in fraudulent activity.</p>
+
+            <h2>15. Changes</h2>
+            <p>We may update this EULA from time to time. Continued use of the Licensed Application after changes constitutes acceptance of the updated terms.</p>
+
+            <h2>16. Developer Information</h2>
+            <div class="card">
+                <p><strong>Developer:</strong> Batuhan Das</p>
+                <p><strong>Email:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+                <p style="margin-bottom: 0;"><strong>Website:</strong> <a href="https://batuuhandas.github.io/wisecal-legal/" style="color: var(--accent);">https://batuuhandas.github.io/wisecal-legal/</a></p>
             </div>
 
-            <!-- Turkish -->
-            <div id="content-tr" class="content">
-                <p class="updated">Son güncelleme: Şubat 2025</p>
+            <div class="contact-section">
+                <h2>Contact</h2>
+                <p>Questions, complaints or claims regarding the Licensed Application?</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
 
-                <h2>Kabul</h2>
-                <p>WiseCal'ı kullanarak bu koşulları kabul etmiş olursunuz. Kabul etmiyorsanız uygulamayı kullanmayın.</p>
+        <!-- TURKISH -->
+        <div id="content-tr" class="content">
+            <div class="updated">Son guncelleme: Mart 2026</div>
 
-                <h2>Hizmet</h2>
-                <p>WiseCal, yapay zeka kullanarak ekran görüntüsünden takvim etkinlikleri oluşturmanıza yardımcı olur. Uygulama, görsellerden metin çıkarır ve bu bilgilere dayalı takvim girişleri oluşturur.</p>
+            <h2>Son Kullanici Lisans Sozlesmesi (EULA)</h2>
+            <p>Bu Son Kullanici Lisans Sozlesmesi ("EULA"), siz ("Son Kullanici") ile Batuhan Das ("Gelistirici", "biz") arasinda WiseCal uygulamasinin ("Lisansli Uygulama") kullanimina iliskin yasal bir sozlesmedir. WiseCal'i indirerek, yukleyerek veya kullanarak bu EULA kosullarina bagli olmayi kabul edersiniz.</p>
 
-                <h2>Sorumluluklarınız</h2>
-                <div class="card">
-                    <ul>
-                        <li>Çıkarılan randevu detaylarının doğruluğunu kontrol edin</li>
-                        <li>İşlediğiniz görselleri paylaşma hakkına sahip olun</li>
-                        <li>Uygulamayı yasadışı amaçlarla kullanmayın</li>
-                    </ul>
-                </div>
+            <h2>1. Onay</h2>
+            <p>Siz ve Gelistirici, bu EULA'nin yalnizca Gelistirici ile Son Kullanici arasinda akdedildigini ve Apple Inc. ("Apple") ile degil, kabul edersiniz. Lisansli Uygulama ve icerigi icin yalnizca Gelistirici sorumludur, Apple degil. Bu EULA, <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" style="color: var(--accent);">Apple Medya Hizmetleri Sartlari ve Kosullari</a> ile celisen kullanim kurallari icermez.</p>
 
-                <h2>Premium Abonelik</h2>
+            <h2>2. Lisans Kapsami</h2>
+            <p>Gelistirici, size sahip oldugunuz veya kontrol ettiginiz Apple markali urunlerde Lisansli Uygulamayi kullanmak icin sinirli, devredilemez bir lisans verir. Bu lisans, Lisansli Uygulamayi ayni anda birden fazla cihazda kullanilabilecek sekilde bir ag uzerinden dagitmaniza izin vermez. Lisansli Uygulamaya Aile Paylasimi, toplu satin alma veya Miras Kisi araciligiyla iliskilendirilmis diger hesaplar tarafindan erisilebilir.</p>
+
+            <h2>3. Hizmet Tanimi</h2>
+            <p>WiseCal, yapay zeka kullanarak ekran goruntusunden takvim etkinlikleri olusturmaniza yardimci olur. Uygulama, gorsellerden metin cikarir ve bu bilgilere dayali takvim girisleri olusturur.</p>
+
+            <h2>4. Sorumluluklariniz</h2>
+            <ul>
+                <li>Cikarilan randevu detaylarinin dogrulugunu kontrol edin</li>
+                <li>Islediginiz gorselleri paylasma hakkina sahip olun</li>
+                <li>Uygulamayi yasadisi amaclarla kullanmayin</li>
+            </ul>
+
+            <h2>5. Premium Abonelik</h2>
+            <div class="card">
                 <ul>
-                    <li>Bazı özellikler ücretli abonelik gerektirir</li>
-                    <li>Apple App Store üzerinden faturalanır</li>
-                    <li>Apple ID ayarlarından istediğiniz zaman iptal edin</li>
-                    <li>İadeler Apple politikalarına göre yapılır</li>
+                    <li>Bazi ozellikler ucretli abonelik gerektirir</li>
+                    <li>Abonelikler Apple App Store uzerinden faturalanir</li>
+                    <li>Abonelikler, mevcut donem bitmeden en az 24 saat once iptal edilmezse otomatik olarak yenilenir</li>
+                    <li>Apple ID ayarlarindan istediginiz zaman iptal edin</li>
+                    <li>Iadeler Apple iade politikalarina gore yapilir</li>
                 </ul>
-
-                <h2>Ücretsiz Deneme</h2>
-                <p>Yeni kullanıcılar 5 ücretsiz etkinlik oluşturma hakkı alır. Deneme sonrası devam için Premium abonelik gereklidir.</p>
-
-                <h2>Sınırlamalar</h2>
-                <div class="warning-card">
-                    <ul>
-                        <li>Metin çıkarmada %100 doğruluk garanti edilmez</li>
-                        <li>Hizmet kullanılabilirliği değişebilir</li>
-                        <li>Çıkarma hatalarından kaynaklanan kaçırılan randevulardan sorumlu değiliz</li>
-                        <li>Uygulama garanti olmaksızın "olduğu gibi" sunulur</li>
-                    </ul>
-                </div>
-
-                <h2>Fikri Mülkiyet</h2>
-                <p>WiseCal ve özellikleri bize aittir. Takvim verileriniz ve kişisel bilgileriniz üzerindeki tüm haklar size aittir.</p>
-
-                <h2>Fesih</h2>
-                <p>Bu koşulları ihlal ederseniz veya hileli faaliyetlerde bulunursanız erişimi sonlandırabiliriz.</p>
-
-                <h2>Değişiklikler</h2>
-                <p>Bu koşulları güncelleyebiliriz. Değişikliklerden sonra kullanmaya devam etmeniz kabul anlamına gelir.</p>
-
-                <div class="contact-section">
-                    <h2>İletişim</h2>
-                    <p>Bu koşullarla ilgili sorularınız için</p>
-                    <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
-                </div>
             </div>
-        </main>
+            <p>Yeni kullanicilar 5 ucretsiz etkinlik olusturma hakki alir. Ucretsiz kullanim sonrasi, yapay zeka ozelliklerinin devamli kullanimi icin Premium abonelik gereklidir.</p>
+
+            <h2>6. Bakim ve Destek</h2>
+            <p>Gelistirici, Lisansli Uygulama ile ilgili tum bakim ve destek hizmetlerini saglamaktan yalnizca sorumludur. Siz ve Gelistirici, Apple'in Lisansli Uygulama ile ilgili herhangi bir bakim ve destek hizmeti saglama yukumlulugu olmadigini kabul edersiniz.</p>
+
+            <h2>7. Garanti</h2>
+            <p>Gelistirici, yururlukteki yasalarin izin verdigi olcude, acik veya zimni tum urun garantilerinden yalnizca sorumludur. Lisansli Uygulamanin herhangi bir garantiye uymamasi durumunda, Apple'i bilgilendirebilirsiniz ve Apple, Lisansli Uygulama icin odenen bedeli size iade edecektir. Yururlukteki yasalarin izin verdigi azami olcude, Apple'in Lisansli Uygulama ile ilgili baska hicbir garanti yukumlulugu yoktur.</p>
+
+            <h2>8. Urun Talepleri</h2>
+            <p>Siz ve Gelistirici, Lisansli Uygulama veya Lisansli Uygulamanin kullanimi ile ilgili tum talepleri ele almaktan Apple'in degil, Gelistiricinin sorumlu oldugunu kabul edersiniz. Bu; (i) urun sorumlulugu talepleri; (ii) Lisansli Uygulamanin yasal veya duzenleyici gereksinimlere uymadigi iddialari; ve (iii) tuketici koruma veya benzer mevzuat kapsamindaki talepleri icerir.</p>
+
+            <h2>9. Fikri Mulkiyet</h2>
+            <p>Siz ve Gelistirici, Lisansli Uygulamanin veya Lisansli Uygulamanin kullaniminizin ucuncu bir tarafin fikri mulkiyet haklarini ihlal ettigi iddia edilmesi durumunda, bu iddianin arastirilmasi, savunulmasi, uzlasilmasi ve sonuclandirilmasindan Apple'in degil, yalnizca Gelistiricinin sorumlu olacagini kabul edersiniz.</p>
+            <p>WiseCal ve ozellikleri Gelistiricinin mulkiyetindedir. Takvim verileriniz ve kisisel bilgileriniz uzerindeki tum haklar size aittir.</p>
+
+            <h2>10. Yasal Uyumluluk</h2>
+            <p>Su hususlari beyan ve garanti edersiniz: (i) ABD Hukumeti tarafindan ambargo uygulanan veya "teror destekci" olarak belirlenen bir bolgede bulunmadiginizi; ve (ii) ABD Hukumeti'nin yasakli veya kisitli taraflar listesinde bulunmadiginizi.</p>
+
+            <h2>11. Ucuncu Taraf Sozlesme Kosullari</h2>
+            <p>Lisansli Uygulamayi kullanirken, kablosuz veri hizmeti sozlesmeniz dahil olmak uzere gecerli ucuncu taraf sozlesme kosullarina uymaniz gerekmektedir.</p>
+
+            <h2>12. Ucuncu Taraf Lehdar</h2>
+            <p>Siz ve Gelistirici, Apple ve Apple'in baglilarinin bu EULA'nin ucuncu taraf lehdarlar oldugunu ve bu EULA'nin hukum ve kosullarini kabul etmeniz uzerine Apple'in bu EULA'yi size karsi ucuncu taraf lehdar olarak uygulama hakkina sahip olacagini (ve bu hakki kabul etmis sayilacagini) kabul edersiniz.</p>
+
+            <h2>13. Sinirlamalar</h2>
+            <ul>
+                <li>Metin cikarmada %100 dogruluk garanti edilmez</li>
+                <li>Hizmet kullanilabilirligi degisebilir</li>
+                <li>Cikarma hatalarindan kaynaklanan kacirilan randevulardan sorumlu degiliz</li>
+                <li>Uygulama herhangi bir garanti olmaksizin "oldugu gibi" sunulur</li>
+            </ul>
+
+            <h2>14. Fesih</h2>
+            <p>Bu EULA, feshedilene kadar gecerlidir. Kosullarindan herhangi birine uymamaniz durumunda bu EULA kapsamindaki haklariniz otomatik olarak sona erer. Hileli faaliyetlerde bulunmaniz durumunda da erisinizi sonlandirabiliriz.</p>
+
+            <h2>15. Degisiklikler</h2>
+            <p>Bu EULA'yi zaman zaman guncelleyebiliriz. Degisikliklerden sonra Lisansli Uygulamayi kullanmaya devam etmeniz, guncellenmis kosullarin kabulunu olusturur.</p>
+
+            <h2>16. Gelistirici Bilgileri</h2>
+            <div class="card">
+                <p><strong>Gelistirici:</strong> Batuhan Das</p>
+                <p><strong>E-posta:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+                <p style="margin-bottom: 0;"><strong>Web Sitesi:</strong> <a href="https://batuuhandas.github.io/wisecal-legal/" style="color: var(--accent);">https://batuuhandas.github.io/wisecal-legal/</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Iletisim</h2>
+                <p>Lisansli Uygulama hakkinda soru, sikayet veya talepleriniz icin</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
+
+        <!-- SPANISH -->
+        <div id="content-es" class="content">
+            <div class="updated">Ultima actualizacion: marzo 2026</div>
+
+            <h2>Acuerdo de Licencia de Usuario Final (EULA)</h2>
+            <p>Este Acuerdo de Licencia de Usuario Final ("EULA") es un acuerdo legal entre usted ("Usuario Final") y Batuhan Das ("Desarrollador", "nosotros") para el uso de la aplicacion WiseCal ("Aplicacion Licenciada"). Al descargar, instalar o usar WiseCal, usted acepta los terminos de este EULA.</p>
+
+            <h2>1. Reconocimiento</h2>
+            <p>Usted y el Desarrollador reconocen que este EULA se celebra unicamente entre el Desarrollador y el Usuario Final, y no con Apple Inc. ("Apple"). El Desarrollador, no Apple, es el unico responsable de la Aplicacion Licenciada y su contenido. Este EULA no establece reglas de uso que entren en conflicto con los <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" style="color: var(--accent);">Terminos y Condiciones de los Servicios de Medios de Apple</a>.</p>
+
+            <h2>2. Alcance de la Licencia</h2>
+            <p>El Desarrollador le otorga una licencia limitada e intransferible para usar la Aplicacion Licenciada en cualquier producto de marca Apple que usted posea o controle, segun lo permitido por las Reglas de Uso establecidas en los Terminos y Condiciones de los Servicios de Medios de Apple. Se puede acceder a la Aplicacion Licenciada mediante otras cuentas asociadas a traves de Compartir en Familia, compras por volumen o Contactos de Legado.</p>
+
+            <h2>3. Descripcion del Servicio</h2>
+            <p>WiseCal le ayuda a crear eventos de calendario a partir de capturas de pantalla usando IA. La aplicacion extrae texto de imagenes y crea entradas de calendario basadas en la informacion extraida.</p>
+
+            <h2>4. Sus Responsabilidades</h2>
+            <ul>
+                <li>Verificar la precision de los detalles de citas extraidos</li>
+                <li>Asegurarse de tener derechos para compartir las imagenes que procesa</li>
+                <li>No usar la aplicacion para fines ilegales</li>
+            </ul>
+
+            <h2>5. Suscripcion Premium</h2>
+            <div class="card">
+                <ul>
+                    <li>Algunas funciones requieren una suscripcion de pago</li>
+                    <li>Las suscripciones se facturan a traves de la Apple App Store</li>
+                    <li>Las suscripciones se renuevan automaticamente a menos que se cancelen al menos 24 horas antes del final del periodo actual</li>
+                    <li>Cancele en cualquier momento en los ajustes de Apple ID</li>
+                    <li>Los reembolsos son gestionados por Apple segun sus politicas</li>
+                </ul>
+            </div>
+            <p>Los nuevos usuarios reciben 5 creaciones de eventos gratuitas. Despues del uso gratuito, se requiere una suscripcion Premium para el uso continuo de funciones de IA.</p>
+
+            <h2>6. Mantenimiento y Soporte</h2>
+            <p>El Desarrollador es el unico responsable de proporcionar cualquier servicio de mantenimiento y soporte con respecto a la Aplicacion Licenciada. Usted y el Desarrollador reconocen que Apple no tiene obligacion alguna de proporcionar servicios de mantenimiento y soporte con respecto a la Aplicacion Licenciada.</p>
+
+            <h2>7. Garantia</h2>
+            <p>El Desarrollador es el unico responsable de cualquier garantia del producto, ya sea expresa o implicita por ley. En caso de que la Aplicacion Licenciada no cumpla con alguna garantia aplicable, puede notificar a Apple, y Apple le reembolsara el precio de compra. En la medida maxima permitida por la ley aplicable, Apple no tendra ninguna otra obligacion de garantia con respecto a la Aplicacion Licenciada.</p>
+
+            <h2>8. Reclamos del Producto</h2>
+            <p>Usted y el Desarrollador reconocen que el Desarrollador, no Apple, es responsable de abordar cualquier reclamo relacionado con la Aplicacion Licenciada, incluyendo: (i) reclamos de responsabilidad del producto; (ii) cualquier reclamo de que la Aplicacion no cumple con requisitos legales o reglamentarios; y (iii) reclamos bajo legislacion de proteccion al consumidor.</p>
+
+            <h2>9. Propiedad Intelectual</h2>
+            <p>Usted y el Desarrollador reconocen que, en caso de cualquier reclamo de terceros de que la Aplicacion Licenciada infringe los derechos de propiedad intelectual de ese tercero, el Desarrollador, no Apple, sera el unico responsable de la investigacion, defensa, acuerdo y resolucion de dicho reclamo.</p>
+            <p>WiseCal y sus funciones son propiedad del Desarrollador. Usted conserva todos los derechos sobre sus datos de calendario e informacion personal.</p>
+
+            <h2>10. Cumplimiento Legal</h2>
+            <p>Usted declara y garantiza que: (i) no se encuentra en una region sujeta a embargo del Gobierno de EE.UU., ni designada como region de "apoyo al terrorismo"; y (ii) no esta en ninguna lista de partes prohibidas o restringidas del Gobierno de EE.UU.</p>
+
+            <h2>11. Terminos de Terceros</h2>
+            <p>Debe cumplir con los terminos aplicables de acuerdos de terceros al usar la Aplicacion Licenciada, incluido su acuerdo de servicio de datos inalambricos.</p>
+
+            <h2>12. Tercero Beneficiario</h2>
+            <p>Usted y el Desarrollador reconocen y aceptan que Apple, y las subsidiarias de Apple, son terceros beneficiarios de este EULA, y que, tras su aceptacion de los terminos de este EULA, Apple tendra el derecho de hacer cumplir este EULA contra usted como tercero beneficiario del mismo.</p>
+
+            <h2>13. Limitaciones</h2>
+            <ul>
+                <li>No garantizamos una precision del 100% en la extraccion de texto</li>
+                <li>La disponibilidad del servicio puede variar</li>
+                <li>No somos responsables de citas perdidas debido a errores de extraccion</li>
+                <li>La aplicacion se proporciona "tal cual" sin garantias de ningun tipo</li>
+            </ul>
+
+            <h2>14. Terminacion</h2>
+            <p>Este EULA es efectivo hasta que se termine. Sus derechos bajo este EULA terminaran automaticamente si no cumple con alguno de sus terminos.</p>
+
+            <h2>15. Cambios</h2>
+            <p>Podemos actualizar este EULA periodicamente. El uso continuado de la Aplicacion Licenciada despues de los cambios constituye la aceptacion de los terminos actualizados.</p>
+
+            <h2>16. Informacion del Desarrollador</h2>
+            <div class="card">
+                <p><strong>Desarrollador:</strong> Batuhan Das</p>
+                <p><strong>Correo electronico:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+                <p style="margin-bottom: 0;"><strong>Sitio web:</strong> <a href="https://batuuhandas.github.io/wisecal-legal/" style="color: var(--accent);">https://batuuhandas.github.io/wisecal-legal/</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Contacto</h2>
+                <p>Preguntas, quejas o reclamos sobre la Aplicacion Licenciada?</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
+
+        <!-- GERMAN -->
+        <div id="content-de" class="content">
+            <div class="updated">Letzte Aktualisierung: Maerz 2026</div>
+
+            <h2>Endbenutzer-Lizenzvereinbarung (EULA)</h2>
+            <p>Diese Endbenutzer-Lizenzvereinbarung ("EULA") ist eine rechtliche Vereinbarung zwischen Ihnen ("Endbenutzer") und Batuhan Das ("Entwickler", "wir") fuer die Nutzung der WiseCal-Anwendung ("Lizenzierte Anwendung"). Durch das Herunterladen, Installieren oder Verwenden von WiseCal stimmen Sie den Bedingungen dieser EULA zu.</p>
+
+            <h2>1. Bestaetigung</h2>
+            <p>Sie und der Entwickler erkennen an, dass diese EULA nur zwischen dem Entwickler und dem Endbenutzer geschlossen wird und nicht mit Apple Inc. ("Apple"). Der Entwickler, nicht Apple, ist allein verantwortlich fuer die Lizenzierte Anwendung und deren Inhalt. Diese EULA sieht keine Nutzungsregeln vor, die im Widerspruch zu den <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" style="color: var(--accent);">Apple Media Services Geschaeftsbedingungen</a> stehen.</p>
+
+            <h2>2. Lizenzumfang</h2>
+            <p>Der Entwickler gewaehrt Ihnen eine eingeschraenkte, nicht uebertragbare Lizenz zur Nutzung der Lizenzierten Anwendung auf allen Apple-Markenprodukten, die Sie besitzen oder kontrollieren, wie in den Nutzungsregeln der Apple Media Services Geschaeftsbedingungen gestattet. Der Zugriff auf die Lizenzierte Anwendung ist auch ueber andere mit Ihnen verknuepfte Konten ueber Familienfreigabe, Volumeneinkauf oder Nachlasskontakte moeglich.</p>
+
+            <h2>3. Dienstbeschreibung</h2>
+            <p>WiseCal hilft Ihnen, Kalenderereignisse aus Screenshots mithilfe von KI zu erstellen. Die App extrahiert Text aus Bildern und erstellt Kalendereintraege basierend auf den extrahierten Informationen.</p>
+
+            <h2>4. Ihre Verantwortlichkeiten</h2>
+            <ul>
+                <li>Ueberpruefen Sie die Richtigkeit der extrahierten Termindetails</li>
+                <li>Stellen Sie sicher, dass Sie die Rechte haben, die verarbeiteten Bilder zu teilen</li>
+                <li>Nutzen Sie die App nicht fuer rechtswidrige Zwecke</li>
+            </ul>
+
+            <h2>5. Premium-Abonnement</h2>
+            <div class="card">
+                <ul>
+                    <li>Einige Funktionen erfordern ein kostenpflichtiges Abonnement</li>
+                    <li>Abonnements werden ueber den Apple App Store abgerechnet</li>
+                    <li>Abonnements verlaengern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums gekuendigt werden</li>
+                    <li>Jederzeit ueber die Apple-ID-Einstellungen kuendbar</li>
+                    <li>Erstattungen werden von Apple gemaess deren Richtlinien bearbeitet</li>
+                </ul>
+            </div>
+            <p>Neue Benutzer erhalten 5 kostenlose Ereigniserstellungen. Nach der kostenlosen Nutzung ist ein Premium-Abonnement fuer die weitere Nutzung der KI-Funktionen erforderlich.</p>
+
+            <h2>6. Wartung und Support</h2>
+            <p>Der Entwickler ist allein verantwortlich fuer die Bereitstellung von Wartungs- und Supportleistungen fuer die Lizenzierte Anwendung. Sie und der Entwickler erkennen an, dass Apple keinerlei Verpflichtung hat, Wartungs- und Supportleistungen fuer die Lizenzierte Anwendung bereitzustellen.</p>
+
+            <h2>7. Garantie</h2>
+            <p>Der Entwickler ist allein verantwortlich fuer alle Produktgarantien, ob ausdruecklich oder gesetzlich impliziert. Sollte die Lizenzierte Anwendung einer anwendbaren Garantie nicht entsprechen, koennen Sie Apple benachrichtigen, und Apple wird den Kaufpreis erstatten. Im maximal gesetzlich zulaessigen Umfang hat Apple keine weitere Garantieverpflichtung bezueglich der Lizenzierten Anwendung.</p>
+
+            <h2>8. Produktansprueche</h2>
+            <p>Sie und der Entwickler erkennen an, dass der Entwickler, nicht Apple, fuer die Bearbeitung aller Ansprueche im Zusammenhang mit der Lizenzierten Anwendung verantwortlich ist, einschliesslich: (i) Produkthaftungsansprueche; (ii) Ansprueche wegen Nichteinhaltung gesetzlicher Anforderungen; und (iii) Ansprueche aus Verbraucherschutzgesetzen.</p>
+
+            <h2>9. Geistiges Eigentum</h2>
+            <p>Sie und der Entwickler erkennen an, dass im Falle eines Anspruchs Dritter wegen Verletzung von geistigen Eigentumsrechten durch die Lizenzierte Anwendung der Entwickler, nicht Apple, allein fuer die Untersuchung, Verteidigung, Beilegung und Erledigung solcher Ansprueche verantwortlich ist.</p>
+            <p>WiseCal und seine Funktionen sind Eigentum des Entwicklers. Sie behalten alle Rechte an Ihren Kalenderdaten und persoenlichen Informationen.</p>
+
+            <h2>10. Rechtliche Einhaltung</h2>
+            <p>Sie erklaeren und garantieren, dass: (i) Sie sich nicht in einer Region befinden, die einem US-Embargo unterliegt oder als "terrorunterstuetzende" Region bezeichnet wurde; und (ii) Sie auf keiner Liste verbotener oder eingeschraenkter Parteien der US-Regierung stehen.</p>
+
+            <h2>11. Drittanbieter-Vertragsbedingungen</h2>
+            <p>Sie muessen bei der Nutzung der Lizenzierten Anwendung die geltenden Vertragsbedingungen von Drittanbietern einhalten, einschliesslich Ihres Mobilfunkvertrags.</p>
+
+            <h2>12. Drittbeguenstigter</h2>
+            <p>Sie und der Entwickler erkennen an und stimmen zu, dass Apple und Apples Tochtergesellschaften Drittbeguenstigte dieser EULA sind und dass Apple nach Ihrer Annahme der Bedingungen dieser EULA das Recht hat (und als dieses Recht akzeptiert habend gilt), diese EULA gegen Sie als Drittbeguenstigter durchzusetzen.</p>
+
+            <h2>13. Einschraenkungen</h2>
+            <ul>
+                <li>Wir garantieren keine 100%ige Genauigkeit bei der Textextraktion</li>
+                <li>Die Dienstverfuegbarkeit kann variieren</li>
+                <li>Wir sind nicht verantwortlich fuer verpasste Termine aufgrund von Extraktionsfehlern</li>
+                <li>Die App wird "wie besehen" ohne jegliche Garantien bereitgestellt</li>
+            </ul>
+
+            <h2>14. Kuendigung</h2>
+            <p>Diese EULA ist wirksam, bis sie gekuendigt wird. Ihre Rechte unter dieser EULA enden automatisch, wenn Sie eine der Bedingungen nicht einhalten.</p>
+
+            <h2>15. Aenderungen</h2>
+            <p>Wir koennen diese EULA von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung der Lizenzierten Anwendung nach Aenderungen gilt als Annahme der aktualisierten Bedingungen.</p>
+
+            <h2>16. Entwicklerinformationen</h2>
+            <div class="card">
+                <p><strong>Entwickler:</strong> Batuhan Das</p>
+                <p><strong>E-Mail:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+                <p style="margin-bottom: 0;"><strong>Website:</strong> <a href="https://batuuhandas.github.io/wisecal-legal/" style="color: var(--accent);">https://batuuhandas.github.io/wisecal-legal/</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Kontakt</h2>
+                <p>Fragen, Beschwerden oder Ansprueche bezueglich der Lizenzierten Anwendung?</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
 
         <footer>
-            <p>&copy; 2025 WiseCal</p>
-            <p><a href="privacy.html">Privacy Policy</a></p>
+            &copy; 2026 WiseCal | <a href="privacy.html">Privacy Policy</a>
         </footer>
     </div>
 
     <script>
+        const titles = { en: 'End-User License Agreement', tr: 'Son Kullanici Lisans Sozlesmesi', es: 'Acuerdo de Licencia de Usuario Final', de: 'Endbenutzer-Lizenzvereinbarung' };
         function switchLang(lang) {
             document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('content-' + lang).classList.add('active');
             event.target.classList.add('active');
-            document.getElementById('page-title').textContent = lang === 'en' ? 'Terms of Service' : 'Kullanım Koşulları';
+            document.getElementById('page-title').textContent = titles[lang];
         }
     </script>
 </body>
