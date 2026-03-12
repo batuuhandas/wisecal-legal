@@ -25,11 +25,7 @@
             }
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
@@ -40,11 +36,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
+        .container { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
 
         header {
             text-align: center;
@@ -54,181 +46,82 @@
         }
 
         .app-icon {
-            width: 72px;
-            height: 72px;
+            width: 72px; height: 72px;
             background: linear-gradient(145deg, #5e5ce6, #bf5af2);
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 16px;
         }
 
-        .app-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: white;
-        }
+        .app-icon svg { width: 40px; height: 40px; fill: white; }
 
         .app-name {
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 14px; font-weight: 600;
             color: var(--text-secondary);
-            letter-spacing: -0.01em;
-            margin-bottom: 8px;
+            letter-spacing: -0.01em; margin-bottom: 8px;
         }
 
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.015em;
-            color: var(--text-primary);
-        }
+        h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.015em; color: var(--text-primary); }
 
         .lang-toggle {
-            display: inline-flex;
-            gap: 8px;
-            margin-top: 20px;
-            padding: 4px;
-            background: var(--bg-secondary);
-            border-radius: 8px;
+            display: inline-flex; gap: 8px; margin-top: 20px; padding: 4px;
+            background: var(--bg-secondary); border-radius: 8px; flex-wrap: wrap; justify-content: center;
         }
 
         .lang-btn {
-            padding: 6px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: transparent;
-            color: var(--text-secondary);
+            padding: 6px 16px; border: none; border-radius: 6px;
+            font-size: 14px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s; background: transparent; color: var(--text-secondary);
         }
 
         .lang-btn.active {
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            background: var(--bg-primary); color: var(--text-primary);
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
-        .updated {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
+        .updated { font-size: 14px; color: var(--text-secondary); margin-bottom: 32px; }
+        .content { display: none; }
+        .content.active { display: block; }
 
-        .content {
-            display: none;
-        }
+        h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin: 40px 0 16px; color: var(--text-primary); }
+        h2:first-of-type { margin-top: 0; }
+        h3 { font-size: 17px; font-weight: 600; margin: 24px 0 12px; color: var(--text-primary); }
+        p { margin-bottom: 16px; color: var(--text-primary); }
+        ul { margin: 0 0 16px 20px; color: var(--text-primary); }
+        li { margin-bottom: 8px; }
 
-        .content.active {
-            display: block;
-        }
+        .card { background: var(--bg-secondary); border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .card ul { margin-bottom: 0; }
+        .card li:last-child { margin-bottom: 0; }
 
-        h2 {
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 40px 0 16px;
-            color: var(--text-primary);
-        }
-
-        h2:first-of-type {
-            margin-top: 0;
-        }
-
-        h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin: 24px 0 12px;
-            color: var(--text-primary);
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-
-        ul {
-            margin: 0 0 16px 20px;
-            color: var(--text-primary);
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .card ul {
-            margin-bottom: 0;
-        }
-
-        .card li:last-child {
-            margin-bottom: 0;
-        }
+        .highlight { background: var(--bg-secondary); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 20px 0; }
 
         .contact-section {
-            text-align: center;
-            padding: 32px;
-            margin-top: 48px;
-            background: var(--bg-secondary);
-            border-radius: 16px;
+            text-align: center; padding: 32px; margin-top: 48px;
+            background: var(--bg-secondary); border-radius: 16px;
         }
-
-        .contact-section h2 {
-            margin: 0 0 8px;
-            font-size: 19px;
-        }
-
-        .contact-section p {
-            margin-bottom: 12px;
-            color: var(--text-secondary);
-            font-size: 15px;
-        }
-
-        .contact-section a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
+        .contact-section h2 { margin: 0 0 8px; font-size: 19px; }
+        .contact-section p { margin-bottom: 12px; color: var(--text-secondary); font-size: 15px; }
+        .contact-section a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
         footer {
-            text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            font-size: 14px;
-            color: var(--text-secondary);
+            text-align: center; margin-top: 48px; padding-top: 24px;
+            border-top: 1px solid var(--border); font-size: 14px; color: var(--text-secondary);
         }
+        footer a { color: var(--accent); text-decoration: none; }
+        strong { font-weight: 600; }
 
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        strong {
-            font-weight: 600;
-        }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+        th { font-weight: 600; color: var(--text-primary); background: var(--bg-secondary); }
+        td { color: var(--text-primary); }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 32px 20px 60px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 19px;
-            }
+            .container { padding: 32px 20px 60px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 19px; }
+            table { font-size: 14px; }
+            th, td { padding: 8px 10px; }
         }
     </style>
 </head>
@@ -237,132 +130,537 @@
         <header>
             <div class="app-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                 </svg>
             </div>
-            <div class="app-name">WISECAL</div>
+            <p class="app-name">WISECAL</p>
             <h1 id="page-title">Privacy Policy</h1>
             <div class="lang-toggle">
                 <button class="lang-btn active" onclick="switchLang('en')">English</button>
-                <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Turkce</button>
+                <button class="lang-btn" onclick="switchLang('es')">Espanol</button>
+                <button class="lang-btn" onclick="switchLang('de')">Deutsch</button>
             </div>
         </header>
 
-        <main>
-            <!-- English -->
-            <div id="content-en" class="content active">
-                <p class="updated">Last updated: February 2025</p>
+        <!-- ==================== ENGLISH ==================== -->
+        <div id="content-en" class="content active">
+            <p class="updated">Last updated: March 2026</p>
 
-                <h2>Introduction</h2>
-                <p>WiseCal respects your privacy. This policy explains how we handle your information when you use our app.</p>
+            <h2>Introduction</h2>
+            <p>Batuhan Das ("Developer", "we", "us", "our") operates the WiseCal mobile application ("App", "Service"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using WiseCal, you agree to the collection and use of information in accordance with this policy.</p>
 
-                <h2>Information We Collect</h2>
+            <h2>1. Information We Collect</h2>
+            <p>We collect different types of information to provide and improve the App:</p>
 
-                <h3>Calendar Data</h3>
-                <p>We access your device calendar through Apple EventKit to create appointments. Calendar data stays on your device and is never uploaded to our servers.</p>
+            <h3>1.1 Information You Provide</h3>
+            <ul>
+                <li><strong>Screenshots/Images:</strong> When you share a screenshot or image with the App, text is extracted from the image on your device using Apple Vision framework. Only the extracted text is sent to our server for AI processing. The original image is never uploaded to any server and is discarded immediately after on-device text extraction.</li>
+                <li><strong>Calendar Data:</strong> When you confirm an event, the App creates entries in your device calendar via Apple EventKit. We do not read, store, or transmit your existing calendar data.</li>
+            </ul>
 
-                <h3>Screenshots</h3>
-                <p>When you share a screenshot, the text is read directly on your device. Only the text is sent to our AI for analysis — your images are never uploaded anywhere and are deleted immediately.</p>
+            <h3>1.2 Automatically Collected Information</h3>
+            <ul>
+                <li><strong>Analytics Data:</strong> We collect anonymous usage data such as feature usage counts, error types, and app performance metrics. This data contains no personally identifiable information (PII). Analytics data is collected via Firebase Analytics.</li>
+                <li><strong>Device Identifier:</strong> A non-personal device identifier is used solely for analytics purposes. This identifier is not linked to your identity and is not used for tracking across apps or websites.</li>
+                <li><strong>Subscription Status:</strong> We use RevenueCat to manage subscriptions. RevenueCat may collect an anonymous app user ID and purchase-related data. No personal information is shared with RevenueCat.</li>
+            </ul>
 
-                <h3>Analytics</h3>
-                <p>We collect anonymous usage data through Firebase Analytics to improve the app. No personally identifiable information is collected.</p>
-
-                <h2>How We Use Your Data</h2>
-                <div class="card">
-                    <ul>
-                        <li>Extract appointment details from screenshots</li>
-                        <li>Create calendar events on your behalf</li>
-                        <li>Improve app performance</li>
-                    </ul>
-                </div>
-
-                <h2>Third-Party Services</h2>
-                <p>We use AI services to analyze text and create appointments, and analytics tools to improve the app. Your calendar is accessed through Apple's built-in calendar system.</p>
-
-                <h2>Data Retention</h2>
-                <ul>
-                    <li><strong>Screenshots:</strong> Deleted immediately after processing</li>
-                    <li><strong>Analytics:</strong> Retained for 90 days</li>
-                    <li><strong>Calendar events:</strong> Stored locally on your device</li>
-                </ul>
-
-                <h2>Your Rights</h2>
-                <p>You can delete the app to remove all local data, disable analytics in device settings, or contact us to request data deletion.</p>
-
-                <h2>Changes</h2>
-                <p>We may update this policy. Changes will be posted on this page.</p>
-
-                <div class="contact-section">
-                    <h2>Contact</h2>
-                    <p>Questions or concerns?</p>
-                    <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
-                </div>
+            <h3>1.3 Information We Do NOT Collect</h3>
+            <div class="highlight">
+                <p style="margin-bottom: 0;">We do <strong>not</strong> collect your name, email address, phone number, location data, contacts, browsing history, or any other personally identifiable information. We do not require account creation to use the App.</p>
             </div>
 
-            <!-- Turkish -->
-            <div id="content-tr" class="content">
-                <p class="updated">Son güncelleme: Şubat 2025</p>
+            <h2>2. How We Use Your Information</h2>
+            <table>
+                <thead>
+                    <tr><th>Data</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Extracted text from images</td><td>Sent to AI service to parse appointment details</td></tr>
+                    <tr><td>Calendar access</td><td>Create events on your device calendar</td></tr>
+                    <tr><td>Anonymous analytics</td><td>Improve app performance and features</td></tr>
+                    <tr><td>Device identifier</td><td>Analytics aggregation (not linked to identity)</td></tr>
+                    <tr><td>Subscription data</td><td>Manage premium features and entitlements</td></tr>
+                </tbody>
+            </table>
 
-                <h2>Giriş</h2>
-                <p>WiseCal olarak gizliliğinize saygı duyuyoruz. Bu politika, uygulamayı kullandığınızda bilgilerinizi nasıl işlediğimizi açıklar.</p>
-
-                <h2>Toplanan Veriler</h2>
-
-                <h3>Takvim Verileri</h3>
-                <p>Randevu oluşturmak için Apple EventKit aracılığıyla takviminize erişiyoruz. Takvim verileri cihazınızda kalır, sunuculara yüklenmez.</p>
-
-                <h3>Ekran Görüntüleri</h3>
-                <p>Paylaştığınız ekran görüntüsündeki yazılar doğrudan cihazınızda okunur. Yapay zekaya sadece okunan metin gönderilir — görselleriniz hiçbir yere yüklenmez ve hemen silinir.</p>
-
-                <h3>Analitik</h3>
-                <p>Uygulamayı geliştirmek için Firebase Analytics ile anonim kullanım verileri topluyoruz. Kişisel tanımlayıcı bilgi toplanmaz.</p>
-
-                <h2>Veri Kullanımı</h2>
-                <div class="card">
-                    <ul>
-                        <li>Ekran görüntüsünden randevu bilgisi çıkarma</li>
-                        <li>Sizin adınıza takvim etkinliği oluşturma</li>
-                        <li>Uygulama performansını iyileştirme</li>
-                    </ul>
-                </div>
-
-                <h2>Üçüncü Taraf Hizmetler</h2>
-                <p>Metin analizi ve randevu oluşturma için yapay zeka hizmetleri, uygulamayı geliştirmek için analitik araçları kullanıyoruz. Takviminize Apple'ın yerleşik takvim sistemi üzerinden erişiyoruz.</p>
-
-                <h2>Veri Saklama</h2>
+            <h2>3. How We Process Your Images</h2>
+            <p>Understanding how your images are processed is important to us:</p>
+            <div class="card">
                 <ul>
-                    <li><strong>Ekran görüntüleri:</strong> İşlem sonrası hemen siliniyor</li>
-                    <li><strong>Analitik:</strong> 90 gün saklanır</li>
-                    <li><strong>Takvim etkinlikleri:</strong> Cihazınızda yerel olarak saklanır</li>
+                    <li><strong>Step 1 — On-Device OCR:</strong> Your image is processed entirely on your device using Apple Vision framework. No image data leaves your device.</li>
+                    <li><strong>Step 2 — Text Transmission:</strong> Only the extracted text (not the image) is sent to our secure Firebase Functions server.</li>
+                    <li><strong>Step 3 — AI Processing:</strong> The text is processed by Google Gemini AI to identify appointment details (date, time, location, description).</li>
+                    <li><strong>Step 4 — Immediate Deletion:</strong> The extracted text is not stored on our servers. It is processed in real-time and discarded immediately after the response is generated.</li>
                 </ul>
-
-                <h2>Haklarınız</h2>
-                <p>Tüm yerel verileri silmek için uygulamayı kaldırabilir, cihaz ayarlarından analitiği devre dışı bırakabilir veya veri silme talebi için bizimle iletişime geçebilirsiniz.</p>
-
-                <h2>Değişiklikler</h2>
-                <p>Bu politikayı güncelleyebiliriz. Değişiklikler bu sayfada duyurulacaktır.</p>
-
-                <div class="contact-section">
-                    <h2>İletişim</h2>
-                    <p>Sorularınız için</p>
-                    <a href="mailto:wisecal@gmail.com">wisecal@gmail.com</a>
-                </div>
             </div>
-        </main>
+
+            <h2>4. Third-Party Services</h2>
+            <p>The App uses the following third-party services, each with their own privacy policies:</p>
+            <table>
+                <thead>
+                    <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Google Firebase</td><td>Analytics and server functions</td><td><a href="https://firebase.google.com/support/privacy" style="color: var(--accent);">Firebase Privacy</a></td></tr>
+                    <tr><td>Google Gemini AI</td><td>Text analysis for appointment extraction</td><td><a href="https://ai.google.dev/terms" style="color: var(--accent);">Google AI Terms</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Subscription management</td><td><a href="https://www.revenuecat.com/privacy" style="color: var(--accent);">RevenueCat Privacy</a></td></tr>
+                    <tr><td>Apple EventKit</td><td>Calendar event creation</td><td><a href="https://www.apple.com/legal/privacy/" style="color: var(--accent);">Apple Privacy</a></td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. Data Storage and Retention</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Images/Screenshots:</strong> Never uploaded. Discarded immediately after on-device OCR processing.</li>
+                    <li><strong>Extracted Text:</strong> Processed in real-time by AI. Not stored on our servers.</li>
+                    <li><strong>Calendar Events:</strong> Stored locally on your device, managed by Apple's calendar system.</li>
+                    <li><strong>Analytics Data:</strong> Anonymous data retained for up to 90 days, then automatically deleted.</li>
+                    <li><strong>Subscription Data:</strong> Managed by RevenueCat and Apple. We do not store payment information.</li>
+                    <li><strong>App Preferences:</strong> Stored locally on your device using UserDefaults and Keychain.</li>
+                </ul>
+            </div>
+
+            <h2>6. Data Security</h2>
+            <p>We take the security of your data seriously:</p>
+            <ul>
+                <li>All network communications use HTTPS/TLS encryption</li>
+                <li>Sensitive data (such as API configuration) is stored in the iOS Keychain</li>
+                <li>No user accounts or passwords are required</li>
+                <li>Server-side processing uses secure Firebase Functions with no persistent data storage</li>
+                <li>The App does not track you across other apps or websites</li>
+            </ul>
+
+            <h2>7. Your Rights and Choices</h2>
+            <p>You have control over your data:</p>
+            <ul>
+                <li><strong>Calendar Access:</strong> You can revoke calendar permission at any time via iOS Settings &gt; Privacy &amp; Security &gt; Calendars.</li>
+                <li><strong>Analytics:</strong> You can limit analytics collection via iOS Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements.</li>
+                <li><strong>Delete All Local Data:</strong> Uninstalling the App removes all locally stored data.</li>
+                <li><strong>Subscription Management:</strong> Manage or cancel subscriptions via your Apple ID settings.</li>
+                <li><strong>Data Deletion Request:</strong> Contact us at <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a> to request deletion of any data associated with your device.</li>
+            </ul>
+
+            <h2>8. Children's Privacy</h2>
+            <p>WiseCal is not directed to children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete such data.</p>
+
+            <h2>9. International Data Transfers</h2>
+            <p>Extracted text may be processed by servers located outside your country of residence (Google Cloud infrastructure). By using the App, you consent to the transfer of this non-personal data to these servers. No personally identifiable information is transferred.</p>
+
+            <h2>10. California Privacy Rights (CCPA)</h2>
+            <p>If you are a California resident, you have the right to request disclosure of the categories of personal information we collect and the purposes for which it is used. As we do not collect personally identifiable information, there is no personal data to disclose, delete, or opt out of selling (we do not sell any user data).</p>
+
+            <h2>11. European Privacy Rights (GDPR)</h2>
+            <p>If you are in the European Economic Area, you have rights under the General Data Protection Regulation. Since WiseCal does not collect personally identifiable information, the data we process (anonymous analytics) falls outside the scope of personal data under GDPR. However, you may contact us to exercise any rights you believe apply.</p>
+
+            <h2>12. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>13. Contact Us</h2>
+            <div class="card">
+                <p><strong>Developer:</strong> Batuhan Das</p>
+                <p style="margin-bottom: 0;"><strong>Email:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Questions?</h2>
+                <p>If you have questions or concerns about this Privacy Policy, please contact us.</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
+
+        <!-- ==================== TURKISH ==================== -->
+        <div id="content-tr" class="content">
+            <p class="updated">Son guncelleme: Mart 2026</p>
+
+            <h2>Giris</h2>
+            <p>Batuhan Das ("Gelistirici", "biz", "bizim") WiseCal mobil uygulamasini ("Uygulama", "Hizmet") isletmektedir. Bu Gizlilik Politikasi, Uygulamayi kullandiginizda bilgilerinizi nasil topladigimizi, kullandigimizi, ifsa ettigimizi ve korudugumuzu aciklar. WiseCal'i kullanarak bu politikaya uygun sekilde bilgi toplanmasini ve kullanilmasini kabul etmis olursunuz.</p>
+
+            <h2>1. Topladigimiz Bilgiler</h2>
+            <p>Uygulamayi saglamak ve gelistirmek icin farkli turde bilgiler topluyoruz:</p>
+
+            <h3>1.1 Sizin Sagladiginiz Bilgiler</h3>
+            <ul>
+                <li><strong>Ekran Goruntuleri/Gorseller:</strong> Uygulama ile bir ekran goruntusu veya gorsel paylastiginizda, metin Apple Vision cercevesi kullanilarak cihazinizda cikarilir. Yalnizca cikarilan metin, yapay zeka islemesi icin sunucumuza gonderilir. Orijinal gorsel hicbir zaman herhangi bir sunucuya yuklenmez ve cihaz uzerinde metin cikarma isleminden hemen sonra silinir.</li>
+                <li><strong>Takvim Verileri:</strong> Bir etkinligi onayladiginizda, Uygulama Apple EventKit araciligiyla cihaz takviminize giris olusturur. Mevcut takvim verilerinizi okumaz, saklamaz veya iletmeyiz.</li>
+            </ul>
+
+            <h3>1.2 Otomatik Olarak Toplanan Bilgiler</h3>
+            <ul>
+                <li><strong>Analitik Verileri:</strong> Ozellik kullanim sayilari, hata turleri ve uygulama performans metrikleri gibi anonim kullanim verileri topluyoruz. Bu veriler kisisel tanimlayici bilgi (KTB) icermez. Analitik veriler Firebase Analytics araciligiyla toplanir.</li>
+                <li><strong>Cihaz Tanimlayicisi:</strong> Yalnizca analitik amaciyla kisisel olmayan bir cihaz tanimlayicisi kullanilir. Bu tanimlayici kimliginize bagli degildir ve uygulamalar veya web siteleri arasinda izleme icin kullanilmaz.</li>
+                <li><strong>Abonelik Durumu:</strong> Abonelikleri yonetmek icin RevenueCat kullaniyoruz. RevenueCat anonim bir uygulama kullanici kimligi ve satin alma ile ilgili veriler toplayabilir. RevenueCat ile hicbir kisisel bilgi paylasilmaz.</li>
+            </ul>
+
+            <h3>1.3 Toplamadigimiz Bilgiler</h3>
+            <div class="highlight">
+                <p style="margin-bottom: 0;">Adinizi, e-posta adresinizi, telefon numaranizi, konum verilerinizi, kisilerinizi, tarama gecmisinizi veya kisisel tanimlayici herhangi bir bilgiyi <strong>toplamiyoruz</strong>. Uygulamayi kullanmak icin hesap olusturma gerekmez.</p>
+            </div>
+
+            <h2>2. Bilgilerinizi Nasil Kullaniyoruz</h2>
+            <table>
+                <thead>
+                    <tr><th>Veri</th><th>Amac</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gorsellerden cikarilan metin</td><td>Randevu detaylarini cikarmak icin AI hizmetine gonderilir</td></tr>
+                    <tr><td>Takvim erisimi</td><td>Cihaz takviminizde etkinlik olusturma</td></tr>
+                    <tr><td>Anonim analitik</td><td>Uygulama performansini ve ozelliklerini gelistirme</td></tr>
+                    <tr><td>Cihaz tanimlayicisi</td><td>Analitik toplama (kimlige bagli degil)</td></tr>
+                    <tr><td>Abonelik verileri</td><td>Premium ozellikleri ve yetkilendirmeleri yonetme</td></tr>
+                </tbody>
+            </table>
+
+            <h2>3. Gorsellerinizi Nasil Isliyoruz</h2>
+            <p>Gorsellerinizin nasil islendigi bizim icin onemlidir:</p>
+            <div class="card">
+                <ul>
+                    <li><strong>Adim 1 — Cihaz Uzerinde OCR:</strong> Gorseliniz tamamen cihazinizda Apple Vision cercevesi kullanilarak islenir. Hicbir gorsel verisi cihazinizdan cikmaz.</li>
+                    <li><strong>Adim 2 — Metin Iletimi:</strong> Yalnizca cikarilan metin (gorsel degil) guvenli Firebase Functions sunucumuza gonderilir.</li>
+                    <li><strong>Adim 3 — AI Islemesi:</strong> Metin, randevu detaylarini (tarih, saat, konum, aciklama) belirlemek icin Google Gemini AI tarafindan islenir.</li>
+                    <li><strong>Adim 4 — Aninda Silme:</strong> Cikarilan metin sunucularimizda saklanmaz. Gercek zamanli olarak islenir ve yanit olusturulduktan hemen sonra silinir.</li>
+                </ul>
+            </div>
+
+            <h2>4. Ucuncu Taraf Hizmetleri</h2>
+            <p>Uygulama, her biri kendi gizlilik politikasina sahip asagidaki ucuncu taraf hizmetleri kullanir:</p>
+            <table>
+                <thead>
+                    <tr><th>Hizmet</th><th>Amac</th><th>Gizlilik Politikasi</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Google Firebase</td><td>Analitik ve sunucu islevi</td><td><a href="https://firebase.google.com/support/privacy" style="color: var(--accent);">Firebase Gizlilik</a></td></tr>
+                    <tr><td>Google Gemini AI</td><td>Randevu cikarimi icin metin analizi</td><td><a href="https://ai.google.dev/terms" style="color: var(--accent);">Google AI Sartlari</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Abonelik yonetimi</td><td><a href="https://www.revenuecat.com/privacy" style="color: var(--accent);">RevenueCat Gizlilik</a></td></tr>
+                    <tr><td>Apple EventKit</td><td>Takvim etkinligi olusturma</td><td><a href="https://www.apple.com/legal/privacy/" style="color: var(--accent);">Apple Gizlilik</a></td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. Veri Saklama ve Muhafaza</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Gorseller/Ekran Goruntuleri:</strong> Asla yuklenmez. Cihaz uzerinde OCR isleminden hemen sonra silinir.</li>
+                    <li><strong>Cikarilan Metin:</strong> AI tarafindan gercek zamanli islenir. Sunucularimizda saklanmaz.</li>
+                    <li><strong>Takvim Etkinlikleri:</strong> Cihazinizda yerel olarak saklanir, Apple'in takvim sistemi tarafindan yonetilir.</li>
+                    <li><strong>Analitik Verileri:</strong> Anonim veriler 90 gune kadar saklanir, sonra otomatik olarak silinir.</li>
+                    <li><strong>Abonelik Verileri:</strong> RevenueCat ve Apple tarafindan yonetilir. Odeme bilgilerini saklamayiz.</li>
+                    <li><strong>Uygulama Tercihleri:</strong> UserDefaults ve Keychain kullanilarak cihazinizda yerel olarak saklanir.</li>
+                </ul>
+            </div>
+
+            <h2>6. Veri Guvenligi</h2>
+            <p>Verilerinizin guvenligini ciddiye aliyoruz:</p>
+            <ul>
+                <li>Tum ag iletisimleri HTTPS/TLS sifreleme kullanir</li>
+                <li>Hassas veriler (API yapilandirmasi gibi) iOS Keychain'de saklanir</li>
+                <li>Kullanici hesabi veya sifre gerekmez</li>
+                <li>Sunucu tarafi islemler, kalici veri depolamasi olmadan guvenli Firebase Functions kullanir</li>
+                <li>Uygulama sizi diger uygulamalar veya web siteleri arasinda izlemez</li>
+            </ul>
+
+            <h2>7. Haklariniz ve Secenekleriniz</h2>
+            <p>Verileriniz uzerinde kontrole sahipsiniz:</p>
+            <ul>
+                <li><strong>Takvim Erisimi:</strong> Takvim iznini istediginiz zaman iOS Ayarlar &gt; Gizlilik ve Guvenlik &gt; Takvimler yoluyla iptal edebilirsiniz.</li>
+                <li><strong>Analitik:</strong> iOS Ayarlar &gt; Gizlilik ve Guvenlik &gt; Analitik ve Iyilestirmeler yoluyla analitik toplama sinirlandirilabilir.</li>
+                <li><strong>Tum Yerel Verileri Silme:</strong> Uygulamayi kaldirmak, yerel olarak saklanan tum verileri siler.</li>
+                <li><strong>Abonelik Yonetimi:</strong> Apple ID ayarlariniz araciligiyla abonelikleri yonetin veya iptal edin.</li>
+                <li><strong>Veri Silme Talebi:</strong> Cihazinizla iliskili verilerin silinmesini talep etmek icin <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a> adresinden bize ulasin.</li>
+            </ul>
+
+            <h2>8. Cocuklarin Gizliligi</h2>
+            <p>WiseCal, 13 yasindan kucuk cocuklara (veya Avrupa Ekonomik Alaninda 16 yasindan kucuklere) yonelik degildir. Cocuklardan bilerek kisisel bilgi toplamayiz. Bir cocugun bize kisisel bilgi sagladigina inaniyorsaniz, lutfen bizimle iletisime gecin, bu verileri derhal silecegiz.</p>
+
+            <h2>9. Uluslararasi Veri Transferleri</h2>
+            <p>Cikarilan metin, ikamet ettiginiz ulke disindaki sunucularda (Google Cloud altyapisi) islenebilir. Uygulamayi kullanarak, bu kisisel olmayan verilerin bu sunuculara aktarilmasina onay verirsiniz. Kisisel tanimlayici hicbir bilgi aktarilmaz.</p>
+
+            <h2>10. KVKK Haklari</h2>
+            <p>Turkiye'de ikamet ediyorsaniz, 6698 sayili Kisisel Verilerin Korunmasi Kanunu (KVKK) kapsaminda haklariniz vardir. WiseCal kisisel tanimlayici bilgi toplamadigi icin, isledigimiz veriler (anonim analitik) KVKK kapsamindaki kisisel veri taniminin disinda kalmaktadir. Ancak, gecerli olduguna inandigniz herhangi bir hakki kullanmak icin bizimle iletisime gecebilirsiniz.</p>
+
+            <h2>11. GDPR Haklari</h2>
+            <p>Avrupa Ekonomik Alanindaysaniz, Genel Veri Koruma Tuzugu kapsaminda haklariniz vardir. WiseCal kisisel tanimlayici bilgi toplamadigi icin, isledigimiz veriler (anonim analitik) GDPR kapsamindaki kisisel veri taniminin disinda kalmaktadir. Ancak, gecerli olduguna inandigniz herhangi bir hakki kullanmak icin bizimle iletisime gecebilirsiniz.</p>
+
+            <h2>12. Bu Politikadaki Degisiklikler</h2>
+            <p>Bu Gizlilik Politikasini zaman zaman guncelleyebiliriz. Degisiklikler bu sayfada guncellenmis "Son guncelleme" tarihi ile yayinlanacaktir. Bu politikayi periyodik olarak gozden gecirmenizi oneririz. Degisikliklerden sonra Uygulamayi kullanmaya devam etmeniz, guncellenmis politikanin kabulunu olusturur.</p>
+
+            <h2>13. Bize Ulasin</h2>
+            <div class="card">
+                <p><strong>Gelistirici:</strong> Batuhan Das</p>
+                <p style="margin-bottom: 0;"><strong>E-posta:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Sorulariniz mi var?</h2>
+                <p>Bu Gizlilik Politikasi hakkinda sorulariniz veya endiseleriniz varsa, lutfen bizimle iletisime gecin.</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
+
+        <!-- ==================== SPANISH ==================== -->
+        <div id="content-es" class="content">
+            <p class="updated">Ultima actualizacion: marzo 2026</p>
+
+            <h2>Introduccion</h2>
+            <p>Batuhan Das ("Desarrollador", "nosotros", "nuestro") opera la aplicacion movil WiseCal ("Aplicacion", "Servicio"). Esta Politica de Privacidad explica como recopilamos, usamos, divulgamos y protegemos su informacion cuando utiliza nuestra Aplicacion. Al usar WiseCal, usted acepta la recopilacion y el uso de informacion de acuerdo con esta politica.</p>
+
+            <h2>1. Informacion que Recopilamos</h2>
+            <p>Recopilamos diferentes tipos de informacion para proporcionar y mejorar la Aplicacion:</p>
+
+            <h3>1.1 Informacion que Usted Proporciona</h3>
+            <ul>
+                <li><strong>Capturas de Pantalla/Imagenes:</strong> Cuando comparte una captura de pantalla o imagen con la Aplicacion, el texto se extrae de la imagen en su dispositivo usando Apple Vision. Solo el texto extraido se envia a nuestro servidor para el procesamiento de IA. La imagen original nunca se carga en ningun servidor y se descarta inmediatamente despues de la extraccion de texto en el dispositivo.</li>
+                <li><strong>Datos del Calendario:</strong> Cuando confirma un evento, la Aplicacion crea entradas en el calendario de su dispositivo a traves de Apple EventKit. No leemos, almacenamos ni transmitimos sus datos de calendario existentes.</li>
+            </ul>
+
+            <h3>1.2 Informacion Recopilada Automaticamente</h3>
+            <ul>
+                <li><strong>Datos de Analitica:</strong> Recopilamos datos de uso anonimos como conteos de uso de funciones, tipos de errores y metricas de rendimiento de la aplicacion. Estos datos no contienen informacion de identificacion personal (PII). Los datos de analitica se recopilan a traves de Firebase Analytics.</li>
+                <li><strong>Identificador de Dispositivo:</strong> Se utiliza un identificador de dispositivo no personal unicamente con fines de analitica. Este identificador no esta vinculado a su identidad y no se utiliza para rastreo entre aplicaciones o sitios web.</li>
+                <li><strong>Estado de Suscripcion:</strong> Usamos RevenueCat para gestionar suscripciones. RevenueCat puede recopilar un ID de usuario de aplicacion anonimo y datos relacionados con compras. No se comparte informacion personal con RevenueCat.</li>
+            </ul>
+
+            <h3>1.3 Informacion que NO Recopilamos</h3>
+            <div class="highlight">
+                <p style="margin-bottom: 0;"><strong>No</strong> recopilamos su nombre, direccion de correo electronico, numero de telefono, datos de ubicacion, contactos, historial de navegacion ni ninguna otra informacion de identificacion personal. No se requiere creacion de cuenta para usar la Aplicacion.</p>
+            </div>
+
+            <h2>2. Como Usamos su Informacion</h2>
+            <table>
+                <thead>
+                    <tr><th>Datos</th><th>Proposito</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Texto extraido de imagenes</td><td>Enviado al servicio de IA para analizar detalles de citas</td></tr>
+                    <tr><td>Acceso al calendario</td><td>Crear eventos en el calendario de su dispositivo</td></tr>
+                    <tr><td>Analitica anonima</td><td>Mejorar el rendimiento y las funciones de la aplicacion</td></tr>
+                    <tr><td>Identificador de dispositivo</td><td>Agregacion de analitica (no vinculado a identidad)</td></tr>
+                    <tr><td>Datos de suscripcion</td><td>Gestionar funciones premium y derechos</td></tr>
+                </tbody>
+            </table>
+
+            <h2>3. Como Procesamos sus Imagenes</h2>
+            <p>Entender como se procesan sus imagenes es importante para nosotros:</p>
+            <div class="card">
+                <ul>
+                    <li><strong>Paso 1 — OCR en el Dispositivo:</strong> Su imagen se procesa completamente en su dispositivo usando Apple Vision. Ningun dato de imagen sale de su dispositivo.</li>
+                    <li><strong>Paso 2 — Transmision de Texto:</strong> Solo el texto extraido (no la imagen) se envia a nuestro servidor seguro de Firebase Functions.</li>
+                    <li><strong>Paso 3 — Procesamiento de IA:</strong> El texto es procesado por Google Gemini AI para identificar los detalles de la cita (fecha, hora, ubicacion, descripcion).</li>
+                    <li><strong>Paso 4 — Eliminacion Inmediata:</strong> El texto extraido no se almacena en nuestros servidores. Se procesa en tiempo real y se descarta inmediatamente despues de generar la respuesta.</li>
+                </ul>
+            </div>
+
+            <h2>4. Servicios de Terceros</h2>
+            <p>La Aplicacion utiliza los siguientes servicios de terceros, cada uno con sus propias politicas de privacidad:</p>
+            <table>
+                <thead>
+                    <tr><th>Servicio</th><th>Proposito</th><th>Politica de Privacidad</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Google Firebase</td><td>Analitica y funciones de servidor</td><td><a href="https://firebase.google.com/support/privacy" style="color: var(--accent);">Privacidad de Firebase</a></td></tr>
+                    <tr><td>Google Gemini AI</td><td>Analisis de texto para extraccion de citas</td><td><a href="https://ai.google.dev/terms" style="color: var(--accent);">Terminos de Google AI</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Gestion de suscripciones</td><td><a href="https://www.revenuecat.com/privacy" style="color: var(--accent);">Privacidad de RevenueCat</a></td></tr>
+                    <tr><td>Apple EventKit</td><td>Creacion de eventos de calendario</td><td><a href="https://www.apple.com/legal/privacy/" style="color: var(--accent);">Privacidad de Apple</a></td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. Almacenamiento y Retencion de Datos</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Imagenes/Capturas:</strong> Nunca se cargan. Se descartan inmediatamente despues del procesamiento OCR en el dispositivo.</li>
+                    <li><strong>Texto Extraido:</strong> Procesado en tiempo real por IA. No se almacena en nuestros servidores.</li>
+                    <li><strong>Eventos del Calendario:</strong> Almacenados localmente en su dispositivo, gestionados por el sistema de calendario de Apple.</li>
+                    <li><strong>Datos de Analitica:</strong> Datos anonimos retenidos hasta 90 dias, luego eliminados automaticamente.</li>
+                    <li><strong>Datos de Suscripcion:</strong> Gestionados por RevenueCat y Apple. No almacenamos informacion de pago.</li>
+                    <li><strong>Preferencias de la App:</strong> Almacenadas localmente en su dispositivo usando UserDefaults y Keychain.</li>
+                </ul>
+            </div>
+
+            <h2>6. Seguridad de Datos</h2>
+            <p>Nos tomamos en serio la seguridad de sus datos:</p>
+            <ul>
+                <li>Todas las comunicaciones de red utilizan cifrado HTTPS/TLS</li>
+                <li>Los datos sensibles (como la configuracion de API) se almacenan en el Keychain de iOS</li>
+                <li>No se requieren cuentas de usuario ni contrasenas</li>
+                <li>El procesamiento del lado del servidor utiliza Firebase Functions seguras sin almacenamiento persistente de datos</li>
+                <li>La Aplicacion no le rastrea a traves de otras aplicaciones o sitios web</li>
+            </ul>
+
+            <h2>7. Sus Derechos y Opciones</h2>
+            <p>Usted tiene control sobre sus datos:</p>
+            <ul>
+                <li><strong>Acceso al Calendario:</strong> Puede revocar el permiso del calendario en cualquier momento via Ajustes de iOS &gt; Privacidad y Seguridad &gt; Calendarios.</li>
+                <li><strong>Analitica:</strong> Puede limitar la recopilacion de analitica via Ajustes de iOS &gt; Privacidad y Seguridad &gt; Analitica y Mejoras.</li>
+                <li><strong>Eliminar Todos los Datos Locales:</strong> Desinstalar la Aplicacion elimina todos los datos almacenados localmente.</li>
+                <li><strong>Gestion de Suscripciones:</strong> Gestione o cancele suscripciones a traves de los ajustes de su Apple ID.</li>
+                <li><strong>Solicitud de Eliminacion de Datos:</strong> Contactenos en <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a> para solicitar la eliminacion de datos asociados con su dispositivo.</li>
+            </ul>
+
+            <h2>8. Privacidad de los Ninos</h2>
+            <p>WiseCal no esta dirigida a menores de 13 anos (o 16 en el Espacio Economico Europeo). No recopilamos intencionalmente informacion personal de ninos. Si cree que un nino nos ha proporcionado informacion personal, contactenos y eliminaremos dichos datos rapidamente.</p>
+
+            <h2>9. Transferencias Internacionales de Datos</h2>
+            <p>El texto extraido puede ser procesado por servidores ubicados fuera de su pais de residencia (infraestructura de Google Cloud). Al usar la Aplicacion, usted consiente la transferencia de estos datos no personales a dichos servidores. No se transfiere informacion de identificacion personal.</p>
+
+            <h2>10. Derechos de Privacidad de California (CCPA)</h2>
+            <p>Si es residente de California, tiene derecho a solicitar la divulgacion de las categorias de informacion personal que recopilamos. Como no recopilamos informacion de identificacion personal, no hay datos personales para divulgar, eliminar ni optar por no vender (no vendemos ningun dato de usuario).</p>
+
+            <h2>11. Derechos de Privacidad Europeos (RGPD)</h2>
+            <p>Si se encuentra en el Espacio Economico Europeo, tiene derechos bajo el Reglamento General de Proteccion de Datos. Dado que WiseCal no recopila informacion de identificacion personal, los datos que procesamos (analitica anonima) quedan fuera del ambito de datos personales segun el RGPD. Sin embargo, puede contactarnos para ejercer cualquier derecho que considere aplicable.</p>
+
+            <h2>12. Cambios a Esta Politica</h2>
+            <p>Podemos actualizar esta Politica de Privacidad periodicamente. Los cambios se publicaran en esta pagina con una fecha actualizada de "Ultima actualizacion". Le recomendamos revisar esta politica periodicamente. El uso continuado de la Aplicacion despues de los cambios constituye la aceptacion de la politica actualizada.</p>
+
+            <h2>13. Contactenos</h2>
+            <div class="card">
+                <p><strong>Desarrollador:</strong> Batuhan Das</p>
+                <p style="margin-bottom: 0;"><strong>Correo electronico:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Preguntas?</h2>
+                <p>Si tiene preguntas o inquietudes sobre esta Politica de Privacidad, contactenos.</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
+
+        <!-- ==================== GERMAN ==================== -->
+        <div id="content-de" class="content">
+            <p class="updated">Letzte Aktualisierung: Maerz 2026</p>
+
+            <h2>Einleitung</h2>
+            <p>Batuhan Das ("Entwickler", "wir", "uns", "unser") betreibt die mobile Anwendung WiseCal ("App", "Dienst"). Diese Datenschutzrichtlinie erklaert, wie wir Ihre Informationen erfassen, verwenden, offenlegen und schuetzen, wenn Sie unsere App nutzen. Durch die Nutzung von WiseCal stimmen Sie der Erfassung und Verwendung von Informationen gemaess dieser Richtlinie zu.</p>
+
+            <h2>1. Informationen, die wir erfassen</h2>
+            <p>Wir erfassen verschiedene Arten von Informationen, um die App bereitzustellen und zu verbessern:</p>
+
+            <h3>1.1 Von Ihnen bereitgestellte Informationen</h3>
+            <ul>
+                <li><strong>Screenshots/Bilder:</strong> Wenn Sie einen Screenshot oder ein Bild mit der App teilen, wird der Text mithilfe von Apple Vision auf Ihrem Geraet extrahiert. Nur der extrahierte Text wird zur KI-Verarbeitung an unseren Server gesendet. Das Originalbild wird niemals auf einen Server hochgeladen und wird sofort nach der Textextraktion auf dem Geraet verworfen.</li>
+                <li><strong>Kalenderdaten:</strong> Wenn Sie ein Ereignis bestaetigen, erstellt die App Eintraege in Ihrem Geraetekalender ueber Apple EventKit. Wir lesen, speichern oder uebertragen Ihre bestehenden Kalenderdaten nicht.</li>
+            </ul>
+
+            <h3>1.2 Automatisch erfasste Informationen</h3>
+            <ul>
+                <li><strong>Analytikdaten:</strong> Wir erfassen anonyme Nutzungsdaten wie Funktionsnutzungszaehler, Fehlertypen und App-Leistungsmetriken. Diese Daten enthalten keine personenbezogenen Informationen (PII). Analytikdaten werden ueber Firebase Analytics erfasst.</li>
+                <li><strong>Geraetekennung:</strong> Eine nicht-personenbezogene Geraetekennung wird ausschliesslich fuer Analytikzwecke verwendet. Diese Kennung ist nicht mit Ihrer Identitaet verknuepft und wird nicht fuer App- oder Website-uebergreifendes Tracking verwendet.</li>
+                <li><strong>Abonnementstatus:</strong> Wir verwenden RevenueCat zur Verwaltung von Abonnements. RevenueCat kann eine anonyme App-Benutzer-ID und kaufbezogene Daten erfassen. Es werden keine persoenlichen Informationen an RevenueCat weitergegeben.</li>
+            </ul>
+
+            <h3>1.3 Informationen, die wir NICHT erfassen</h3>
+            <div class="highlight">
+                <p style="margin-bottom: 0;">Wir erfassen <strong>nicht</strong> Ihren Namen, Ihre E-Mail-Adresse, Telefonnummer, Standortdaten, Kontakte, Browserverlauf oder andere personenbezogene Informationen. Zur Nutzung der App ist keine Kontoerstellung erforderlich.</p>
+            </div>
+
+            <h2>2. Wie wir Ihre Informationen verwenden</h2>
+            <table>
+                <thead>
+                    <tr><th>Daten</th><th>Zweck</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Extrahierter Text aus Bildern</td><td>An KI-Dienst gesendet zur Analyse von Termindetails</td></tr>
+                    <tr><td>Kalenderzugriff</td><td>Ereignisse in Ihrem Geraetekalender erstellen</td></tr>
+                    <tr><td>Anonyme Analytik</td><td>Verbesserung der App-Leistung und Funktionen</td></tr>
+                    <tr><td>Geraetekennung</td><td>Analytik-Aggregation (nicht mit Identitaet verknuepft)</td></tr>
+                    <tr><td>Abonnementdaten</td><td>Verwaltung von Premium-Funktionen und Berechtigungen</td></tr>
+                </tbody>
+            </table>
+
+            <h2>3. Wie wir Ihre Bilder verarbeiten</h2>
+            <p>Es ist uns wichtig, dass Sie verstehen, wie Ihre Bilder verarbeitet werden:</p>
+            <div class="card">
+                <ul>
+                    <li><strong>Schritt 1 — OCR auf dem Geraet:</strong> Ihr Bild wird vollstaendig auf Ihrem Geraet mit Apple Vision verarbeitet. Keine Bilddaten verlassen Ihr Geraet.</li>
+                    <li><strong>Schritt 2 — Textuebertragung:</strong> Nur der extrahierte Text (nicht das Bild) wird an unseren sicheren Firebase Functions-Server gesendet.</li>
+                    <li><strong>Schritt 3 — KI-Verarbeitung:</strong> Der Text wird von Google Gemini KI verarbeitet, um Termindetails (Datum, Uhrzeit, Ort, Beschreibung) zu identifizieren.</li>
+                    <li><strong>Schritt 4 — Sofortige Loeschung:</strong> Der extrahierte Text wird nicht auf unseren Servern gespeichert. Er wird in Echtzeit verarbeitet und sofort nach der Antwortgenerierung verworfen.</li>
+                </ul>
+            </div>
+
+            <h2>4. Drittanbieter-Dienste</h2>
+            <p>Die App verwendet die folgenden Drittanbieter-Dienste, jeweils mit eigenen Datenschutzrichtlinien:</p>
+            <table>
+                <thead>
+                    <tr><th>Dienst</th><th>Zweck</th><th>Datenschutzrichtlinie</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Google Firebase</td><td>Analytik und Serverfunktionen</td><td><a href="https://firebase.google.com/support/privacy" style="color: var(--accent);">Firebase Datenschutz</a></td></tr>
+                    <tr><td>Google Gemini KI</td><td>Textanalyse fuer Terminextraktion</td><td><a href="https://ai.google.dev/terms" style="color: var(--accent);">Google KI Bedingungen</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Abonnementverwaltung</td><td><a href="https://www.revenuecat.com/privacy" style="color: var(--accent);">RevenueCat Datenschutz</a></td></tr>
+                    <tr><td>Apple EventKit</td><td>Kalenderereigniserstellung</td><td><a href="https://www.apple.com/legal/privacy/" style="color: var(--accent);">Apple Datenschutz</a></td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. Datenspeicherung und -aufbewahrung</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Bilder/Screenshots:</strong> Werden niemals hochgeladen. Sofort nach der OCR-Verarbeitung auf dem Geraet verworfen.</li>
+                    <li><strong>Extrahierter Text:</strong> In Echtzeit von KI verarbeitet. Nicht auf unseren Servern gespeichert.</li>
+                    <li><strong>Kalenderereignisse:</strong> Lokal auf Ihrem Geraet gespeichert, verwaltet durch Apples Kalendersystem.</li>
+                    <li><strong>Analytikdaten:</strong> Anonyme Daten bis zu 90 Tage aufbewahrt, dann automatisch geloescht.</li>
+                    <li><strong>Abonnementdaten:</strong> Verwaltet von RevenueCat und Apple. Wir speichern keine Zahlungsinformationen.</li>
+                    <li><strong>App-Einstellungen:</strong> Lokal auf Ihrem Geraet gespeichert mit UserDefaults und Keychain.</li>
+                </ul>
+            </div>
+
+            <h2>6. Datensicherheit</h2>
+            <p>Wir nehmen die Sicherheit Ihrer Daten ernst:</p>
+            <ul>
+                <li>Alle Netzwerkkommunikationen verwenden HTTPS/TLS-Verschluesselung</li>
+                <li>Sensible Daten (wie API-Konfiguration) werden im iOS Keychain gespeichert</li>
+                <li>Keine Benutzerkonten oder Passwoerter erforderlich</li>
+                <li>Serverseitige Verarbeitung verwendet sichere Firebase Functions ohne persistente Datenspeicherung</li>
+                <li>Die App verfolgt Sie nicht ueber andere Apps oder Websites hinweg</li>
+            </ul>
+
+            <h2>7. Ihre Rechte und Wahlmoeglichkeiten</h2>
+            <p>Sie haben die Kontrolle ueber Ihre Daten:</p>
+            <ul>
+                <li><strong>Kalenderzugriff:</strong> Sie koennen die Kalenderberechtigung jederzeit ueber iOS-Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Kalender widerrufen.</li>
+                <li><strong>Analytik:</strong> Sie koennen die Analytikerfassung ueber iOS-Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Analyse &amp; Verbesserungen einschraenken.</li>
+                <li><strong>Alle lokalen Daten loeschen:</strong> Durch Deinstallation der App werden alle lokal gespeicherten Daten entfernt.</li>
+                <li><strong>Abonnementverwaltung:</strong> Verwalten oder kuendigen Sie Abonnements ueber Ihre Apple-ID-Einstellungen.</li>
+                <li><strong>Antrag auf Datenloeschung:</strong> Kontaktieren Sie uns unter <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a>, um die Loeschung von mit Ihrem Geraet verbundenen Daten zu beantragen.</li>
+            </ul>
+
+            <h2>8. Datenschutz fuer Kinder</h2>
+            <p>WiseCal richtet sich nicht an Kinder unter 13 Jahren (oder 16 im Europaeischen Wirtschaftsraum). Wir erfassen wissentlich keine personenbezogenen Daten von Kindern. Wenn Sie glauben, dass ein Kind uns personenbezogene Daten bereitgestellt hat, kontaktieren Sie uns bitte, und wir werden diese Daten umgehend loeschen.</p>
+
+            <h2>9. Internationale Datenuebermittlungen</h2>
+            <p>Extrahierter Text kann von Servern ausserhalb Ihres Wohnsitzlandes verarbeitet werden (Google Cloud-Infrastruktur). Durch die Nutzung der App stimmen Sie der Uebermittlung dieser nicht-personenbezogenen Daten an diese Server zu. Es werden keine personenbezogenen Informationen uebermittelt.</p>
+
+            <h2>10. Datenschutzrechte nach DSGVO</h2>
+            <p>Wenn Sie sich im Europaeischen Wirtschaftsraum befinden, haben Sie Rechte nach der Datenschutz-Grundverordnung (DSGVO). Da WiseCal keine personenbezogenen Informationen erfasst, fallen die von uns verarbeiteten Daten (anonyme Analytik) nicht unter den Begriff der personenbezogenen Daten gemaess DSGVO. Sie koennen uns jedoch kontaktieren, um Rechte auszuueben, die Sie fuer anwendbar halten.</p>
+
+            <h2>11. Aenderungen dieser Richtlinie</h2>
+            <p>Wir koennen diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Aenderungen werden auf dieser Seite mit einem aktualisierten "Letzte Aktualisierung"-Datum veroeffentlicht. Wir empfehlen Ihnen, diese Richtlinie regelmaessig zu ueberpruefen. Die fortgesetzte Nutzung der App nach Aenderungen gilt als Annahme der aktualisierten Richtlinie.</p>
+
+            <h2>12. Kontaktieren Sie uns</h2>
+            <div class="card">
+                <p><strong>Entwickler:</strong> Batuhan Das</p>
+                <p style="margin-bottom: 0;"><strong>E-Mail:</strong> <a href="mailto:wisecal.help@outlook.com" style="color: var(--accent);">wisecal.help@outlook.com</a></p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Fragen?</h2>
+                <p>Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte.</p>
+                <a href="mailto:wisecal.help@outlook.com">wisecal.help@outlook.com</a>
+            </div>
+        </div>
 
         <footer>
-            <p>&copy; 2025 WiseCal</p>
-            <p><a href="terms.html">Terms of Service</a></p>
+            &copy; 2026 WiseCal | <a href="terms.html">EULA</a>
         </footer>
     </div>
 
     <script>
+        const titles = { en: 'Privacy Policy', tr: 'Gizlilik Politikasi', es: 'Politica de Privacidad', de: 'Datenschutzrichtlinie' };
         function switchLang(lang) {
             document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('content-' + lang).classList.add('active');
             event.target.classList.add('active');
-            document.getElementById('page-title').textContent = lang === 'en' ? 'Privacy Policy' : 'Gizlilik Politikası';
+            document.getElementById('page-title').textContent = titles[lang];
         }
     </script>
 </body>
